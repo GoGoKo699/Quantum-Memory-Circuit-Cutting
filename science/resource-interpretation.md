@@ -107,7 +107,7 @@ Calibration is an additional measurement task. The [precision account](precision
 For a decomposition with extent $`\Gamma`$, sample term $`\ell`$ with probability $`|a_\ell|/\Gamma`$. Run its physical instrument, record its score $`s_h`$, and obtain a tester outcome $`Y\in[-1,1]`$. The random variable
 
 ```math
-X=\Gamma\,\operatorname{sgn}(a_\ell)\,s_hY
+X=\Gamma\,\mathrm{sgn}(a_\ell)\,s_hY
 ```
 
 is unbiased for the target expectation when the process identity is exact, and satisfies $`|X|\leq\Gamma`$. Independent repetitions therefore obey the sufficient Hoeffding bound

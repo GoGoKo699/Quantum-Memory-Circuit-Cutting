@@ -89,7 +89,7 @@ For every slot input, prepare a maximally entangled state between that input and
 
 ```math
 J(\mathcal C_h)\succeq0,
-\qquad \sum_h\operatorname{Tr}J(\mathcal C_h)=1.
+\qquad \sum_h\mathrm{Tr}J(\mathcal C_h)=1.
 ```
 
 The ideal wire stream has Choi state $`\bigotimes_j\Phi_{d_j}`$, with
@@ -104,10 +104,10 @@ The ideal gate stream has Choi state $`\bigotimes_j|J(U_j)\rangle\langle J(U_j)|
 If a Hermitian operator $`W`$ obeys
 
 ```math
-\left|\operatorname{Tr}\!\left[WJ(\mathcal F)\right]\right|\leq1
+\left|\mathrm{Tr}\!\left[WJ(\mathcal F)\right]\right|\leq1
 ```
 
-for every allowed scored atom, then every exact decomposition satisfies $`\Gamma\geq\operatorname{Tr}[WJ(\mathcal T)]`$. The factorization proofs refine accessible local histories while respecting the memory channel. A hidden entanglement-breaking reset outcome may be exposed for a lower bound, since granting that classical information enlarges the model. Exposing an unflagged dephasing error would instead remove a charged resource restriction and invalidate the noisy-memory cone used here.
+for every allowed scored atom, then every exact decomposition satisfies $`\Gamma\geq\mathrm{Tr}[WJ(\mathcal T)]`$. The factorization proofs refine accessible local histories while respecting the memory channel. A hidden entanglement-breaking reset outcome may be exposed for a lower bound, since granting that classical information enlarges the model. Exposing an unflagged dephasing error would instead remove a charged resource restriction and invalidate the noisy-memory cone used here.
 
 ## Exact statements and where they are proved
 

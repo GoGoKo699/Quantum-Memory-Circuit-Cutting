@@ -39,7 +39,7 @@ W=4\Phi-I_4
 has expectation between minus one and one on every separable state, but expectation three on the ideal Choi state. Retaining physical branch probabilities and bounded scores preserves the same absolute bound. Applying $`W`$ to a signed decomposition gives
 
 ```math
-3=\operatorname{Tr}(W\Phi)
+3=\mathrm{Tr}(W\Phi)
 \leq\sum_\ell|a_\ell|=\Gamma.
 ```
 
@@ -52,14 +52,14 @@ The bound is attained. Let $`R=(I_4-\Phi)/3`$, and define two separable states
 \qquad \rho_-=R.
 ```
 
-They obey $`\Phi=2\rho_+-\rho_-`$. They can be prepared with local states and shared classical random rotations; the finite construction is described in [Dephasing memory, Section 2](../science/dephasing-memory.md#2-four-physical-resources-and-their-full-matrix-identity). Teleportation with each resource gives a physical local cutting channel. For example, if $`\mathcal R(X)=\operatorname{Tr}(X)I_2/2`$ is complete replacement by the maximally mixed state, these two channels are
+They obey $`\Phi=2\rho_+-\rho_-`$. They can be prepared with local states and shared classical random rotations; the finite construction is described in [Dephasing memory, Section 2](../science/dephasing-memory.md#2-four-physical-resources-and-their-full-matrix-identity). Teleportation with each resource gives a physical local cutting channel. For example, if $`\mathcal R(X)=\mathrm{Tr}(X)I_2/2`$ is complete replacement by the maximally mixed state, these two channels are
 
 ```math
-\mathcal E_+=\frac{\operatorname{id}+2\mathcal R}{3},
+\mathcal E_+=\frac{\mathrm{id}+2\mathcal R}{3},
 \qquad
-\mathcal E_-=\frac{4\mathcal R-\operatorname{id}}{3},
+\mathcal E_-=\frac{4\mathcal R-\mathrm{id}}{3},
 \qquad
-\operatorname{id}=2\mathcal E_+-\mathcal E_-.
+\mathrm{id}=2\mathcal E_+-\mathcal E_-.
 ```
 
 The minus sign in the formula for $`\mathcal E_-`$ does not mean it is unphysical: its Choi state is the positive separable state $`\rho_-`$. The outer decomposition has weights two and minus one, hence extent three. One samples its two channels with probabilities two thirds and one third, and weights their outcomes by plus three and minus three.

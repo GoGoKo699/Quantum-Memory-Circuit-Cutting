@@ -33,7 +33,7 @@ Three choices must be kept separate: matrix vectorization, tensor-factor order, 
 Let $`A:X\to Y`$, with input dimension $`d=\dim X`$, and fix the bases used by the Choi construction. In the convention of Chapter 1,
 
 ```math
-\operatorname{vec}_{\mathrm W}(A)
+\mathrm{vec}_{\mathrm W}(A)
 =\sum_{y,x} A_{yx}\lvert y\rangle_Y\otimes\lvert x\rangle_X.
 ```
 
@@ -47,7 +47,7 @@ J_{\mathrm W}(\mathcal E)
 \lvert\Phi_d\rangle_{RX}
 &=\frac1{\sqrt d}\sum_x\lvert x\rangle_R\lvert x\rangle_X,\\
 J_{\mathrm{repo}}(\mathcal E)
-&=(\operatorname{id}_R\otimes\mathcal E)
+&=(\mathrm{id}_R\otimes\mathcal E)
    (\lvert\Phi_d\rangle\langle\Phi_d\rvert).
 \end{aligned}
 ```
@@ -62,9 +62,9 @@ Let $`S:Y\otimes X\to X\otimes Y`$ exchange the factors, identifying the second 
 For equal factor spaces, this is $`J_{\mathrm{repo}}=(\mathrm{SWAP}\,J_{\mathrm W}\,\mathrm{SWAP})/d`$. No partial transpose is part of this translation. In particular, a trace-preserving map satisfies
 
 ```math
-\operatorname{Tr}J_{\mathrm W}=d,\qquad
-\operatorname{Tr}J_{\mathrm{repo}}=1,\qquad
-\operatorname{Tr}_Y J_{\mathrm{repo}}=I_R/d.
+\mathrm{Tr}J_{\mathrm W}=d,\qquad
+\mathrm{Tr}J_{\mathrm{repo}}=1,\qquad
+\mathrm{Tr}_Y J_{\mathrm{repo}}=I_R/d.
 ```
 
 A unitary $`U`$ therefore has the project's normalized Choi vector
@@ -72,7 +72,7 @@ A unitary $`U`$ therefore has the project's normalized Choi vector
 ```math
 \lvert J(U)\rangle
 =(I_R\otimes U)\lvert\Phi_d\rangle
-=\frac{S\operatorname{vec}_{\mathrm W}(U)}{\sqrt d}.
+=\frac{S\mathrm{vec}_{\mathrm W}(U)}{\sqrt d}.
 ```
 
 For a qubit wire, $`d=2`$. For a two-qubit gate, the **total input dimension is $`d=4`$**. After that gate's Choi state is formed, its factors are regrouped as Alice's reference and output versus Bob's reference and output. Regrouping is a permutation, so it introduces no further numerical factor. Proposition 6.22 makes the analogous laboratory grouping explicit in the book's ordering. The book's natural representation $`K(\mathcal E)`$ is a different matrix representation from $`J_{\mathrm W}(\mathcal E)`$.
@@ -107,20 +107,20 @@ The instrument language in Chapter 2 gives a family of completely positive branc
 The underlying experiment is physical. Its scored linear map $`\mathcal F`$ can fail to be completely positive or trace preserving. On the project's normalized Bell tester, write
 
 ```math
-p_h=\operatorname{Tr}J(\mathcal C_h),\qquad
+p_h=\mathrm{Tr}J(\mathcal C_h),\qquad
 \sum_h p_h=1.
 ```
 
 These are probabilities **for this tester**. If $`p_h>0`$, the conditional state is $`J(\mathcal C_h)/p_h`$. Keeping $`p_h`$ is what lets a branchwise witness bound pass to a whole scored experiment. If each branch obeys
 
 ```math
-\left|\operatorname{Tr}\bigl[WJ(\mathcal C_h)\bigr]\right|\leq p_h,
+\left|\mathrm{Tr}\bigl[WJ(\mathcal C_h)\bigr]\right|\leq p_h,
 ```
 
 then
 
 ```math
-\left|\operatorname{Tr}\bigl[WJ(\mathcal F)\bigr]\right|
+\left|\mathrm{Tr}\bigl[WJ(\mathcal F)\bigr]\right|
 \leq\sum_h |s_h|p_h\leq1.
 ```
 

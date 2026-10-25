@@ -8,50 +8,50 @@ The unrestricted black-box gate-cutting optimum and the virtual-resource constru
 
 At slot $`j`$, one input qubit arrives at each laboratory. The desired operation is the known two-qubit unitary
 
-$$
+```math
 U_j=(V_{A,j}\otimes V_{B,j})
 \left(\sum_{\alpha=0}^3u_{j\alpha}\,
 \sigma_\alpha\otimes\sigma_\alpha\right)
 (W_{A,j}\otimes W_{B,j}),
-$$
+```
 
 where $`\sigma_0=I`$ and $`\sigma_1,\sigma_2,\sigma_3`$ are the Pauli matrices. The KAK coefficients are normalized by
 
-$$
+```math
 \sum_{\alpha=0}^3|u_{j\alpha}|^2=1.
-$$
+```
 
 Define
 
-$$
+```math
 \chi_j=\left(\sum_{\alpha=0}^3|u_{j\alpha}|\right)^2,
 \qquad 1\leq\chi_j\leq4.
-$$
+```
 
 Outer one-qubit unitaries are free local operations and can be executed at the actual slot. They do not change $`\chi_j`$.
 
 For a single-qubit operator $`L`$, write
 
-$$
+```math
 |L\rangle\!\rangle=(I\otimes L)|\Phi_2\rangle.
-$$
+```
 
 If $`L`$ is unitary, this vector has norm one. In particular,
 
-$$
+```math
 \langle\!\langle L|M\rangle\!\rangle
-=\frac12\operatorname{Tr}(L^\dagger M).
-$$
+=\frac12\mathrm{Tr}(L^\dagger M).
+```
 
 The normalized gate Choi vector is
 
-$$
+```math
 |J(U_j)\rangle
 =\sum_\alpha u_{j\alpha}
 |V_{A,j}\sigma_\alpha W_{A,j}\rangle\!\rangle_A
 \otimes
 |V_{B,j}\sigma_\alpha W_{B,j}\rangle\!\rangle_B.
-$$
+```
 
 The local vectors in either sum are orthonormal, since the Pauli operators are orthonormal in the normalized Hilbert--Schmidt inner product. Absorbing the phase of each nonzero coefficient into one local vector gives a Schmidt decomposition with coefficients $`|u_{j\alpha}|`$. There is no additional factor of two in these normalized Choi Schmidt coefficients.
 
@@ -61,18 +61,18 @@ Use the [operational model](model.md), with prescribed Alice and Bob coherence-e
 
 Let $`\mathcal I`$ be the common refinement of the two partitions. Set
 
-$$
+```math
 \chi_I=\prod_{j\in I}\chi_j.
-$$
+```
 
 **Theorem 1 — Gate common-refinement law.** The optimal signed extent for the ordered gate process is
 
-$$
+```math
 \boxed{
 \Gamma_{\mathcal P_A,\mathcal P_B}(U_1,\ldots,U_n)
 =\prod_{I\in\mathcal I}(2\chi_I-1).
 }
-$$
+```
 
 The lower bound permits arbitrary local instruments, shared randomness, and two-way classical communication. The upper bound uses local operations and bounded classical scores, with a shared initial sample label; no communication between laboratories during the quantum execution is needed. Its private resource storage is charged and survives only within a common interval.
 
@@ -82,25 +82,25 @@ The epoch-overlap graph is a forest by Lemma 2 of [Reset schedules](reset-schedu
 
 The target Choi state is
 
-$$
+```math
 J(\mathcal T)=\bigotimes_{j=1}^n
 |J(U_j)\rangle\langle J(U_j)|.
-$$
+```
 
 The edge corresponding to $`I`$ carries the product of the gate Choi states in that interval. Its Schmidt coefficients are the nonzero products
 
-$$
+```math
 s_{I,\boldsymbol\alpha}
 =\prod_{j\in I}|u_{j\alpha_j}|.
-$$
+```
 
 They obey $`\sum_{\boldsymbol\alpha}s_{I,\boldsymbol\alpha}^2=1`$ and
 
-$$
+```math
 \left(\sum_{\boldsymbol\alpha}s_{I,\boldsymbol\alpha}\right)^2
 =\prod_{j\in I}\left(\sum_{\alpha_j}|u_{j\alpha_j}|\right)^2
 =\chi_I.
-$$
+```
 
 Apply the arbitrary-Schmidt-support witness of [Theorem 1 in Forest witness](forest-witness.md) to these pure edges. It has absolute expectation at most one on every scored physical atom, while its target expectation is $`\prod_I(2\chi_I-1)`$. The signed-decomposition triangle inequality proves the lower bound.
 
@@ -112,48 +112,48 @@ We now prove the matching upper bound for an interval of $`m`$ gates. Relabel it
 
 Let $`\boldsymbol k=(k_1,\ldots,k_m)`$ be a Pauli-label string and define
 
-$$
+```math
 w_{\boldsymbol k}=\prod_{j=1}^m u_{j k_j},
 \qquad
 s_{\boldsymbol k}=|w_{\boldsymbol k}|,
 \qquad
 \theta_{\boldsymbol k}=\arg w_{\boldsymbol k}.
-$$
+```
 
 Zero coefficients can be omitted. Introduce two private resource qubits $`R_{L,j},S_{L,j}`$ per slot and per laboratory $`L\in\{A,B\}`$. The local Bell-basis vectors are
 
-$$
+```math
 |\boldsymbol k\rangle\!\rangle_L
 =\bigotimes_{j=1}^m|\sigma_{k_j}\rangle\!\rangle_{R_{L,j}S_{L,j}}.
-$$
+```
 
 The formal parallel Choi vector of the KAK cores is
 
-$$
+```math
 |\Psi\rangle
 =\sum_{\boldsymbol k}w_{\boldsymbol k}
 |\boldsymbol k\rangle\!\rangle_A
 |\boldsymbol k\rangle\!\rangle_B.
-$$
+```
 
 Set
 
-$$
+```math
 |a_{\boldsymbol k}\rangle
 =e^{i\theta_{\boldsymbol k}}|\boldsymbol k\rangle\!\rangle_A,
 \qquad
 |b_{\boldsymbol k}\rangle
 =|\boldsymbol k\rangle\!\rangle_B.
-$$
+```
 
 These are orthonormal families, and $`|\Psi\rangle=\sum_{\boldsymbol k}s_{\boldsymbol k}|a_{\boldsymbol k}\rangle|b_{\boldsymbol k}\rangle`$ is its Schmidt form. The finite decomposition proved in [Forest witness, Section 4](forest-witness.md) expresses $`|\Psi\rangle\langle\Psi|`$ as diagonal product states plus eight signed local cat products for every unordered distinct pair $`\{\boldsymbol k,\boldsymbol l\}`$. Its extent is
 
-$$
+```math
 \sum_{\boldsymbol k}s_{\boldsymbol k}^2
 +4\sum_{\boldsymbol k<\boldsymbol l}s_{\boldsymbol k}s_{\boldsymbol l}
 =2\left(\sum_{\boldsymbol k}s_{\boldsymbol k}\right)^2-1
 =2\chi_I-1.
-$$
+```
 
 Every term is a physical product state across the laboratories. It can be prepared before the interval's first actual input arrives, using only the specified gate descriptions and a sampled classical label. This preparation is of private virtual resources, not of future data inputs.
 
@@ -163,46 +163,46 @@ For non-Clifford gates, ordinary gate teleportation with this formal Choi state 
 
 For a Pauli label $`a`$, choose the Bell vector on an incoming qubit $`Q`$ and a resource-input qubit $`R`$ as
 
-$$
+```math
 |\beta_a\rangle_{QR}
 =(I\otimes\sigma_a^*)|\Phi_2\rangle_{QR}.
-$$
+```
 
 Here the star denotes entrywise complex conjugation in the computational basis, $`\sigma_a^*=\overline{\sigma_a}`$; adjoints are denoted by $`\dagger`$. This convention is relevant for the $`Y`$ Bell outcome.
 
 With resource $`|P\rangle\!\rangle_{RS}`$, contraction gives
 
-$$
+```math
 (\langle\beta_a|_{QR}\otimes I_S)
 \left(|\varphi\rangle_Q\otimes|P\rangle\!\rangle_{RS}\right)
 =\frac12P\sigma_a|\varphi\rangle_S.
-$$
+```
 
 After applying $`\sigma_a`$ to the output, a Pauli $`P=\sigma_k`$ satisfies
 
-$$
+```math
 \sigma_aP\sigma_a=f(a,k)P,
 \qquad f(a,k)\in\{+1,-1\}.
-$$
+```
 
 Consequently, for a resource matrix unit $`|\sigma_k\rangle\!\rangle\langle\!\langle\sigma_l|`$, the conditional corrected map on an arbitrary input operator $`X`$ is
 
-$$
+```math
 X\longmapsto
 \frac14 f(a,k)f(a,l)\,
 \sigma_kX\sigma_l^\dagger.
-$$
+```
 
 The identity also holds when $`X`$ acts jointly on an inaccessible reference: the Pauli operators then act only on the local input factor. It is an operator identity, not an assumption about pure or uncorrelated data.
 
 At gate slot $`j`$, Alice and Bob perform this local Bell measurement separately, with outcomes $`a_j,b_j`$, and apply their local Pauli corrections before returning the outputs. For a fixed pair of multi-indices, define the classical sign
 
-$$
+```math
 h_{\boldsymbol k\boldsymbol l}(\boldsymbol a,\boldsymbol b)
 =\prod_{j=1}^m
 f(a_j,k_j)f(a_j,l_j)
 f(b_j,k_j)f(b_j,l_j).
-$$
+```
 
 Its absolute value is one. If $`\boldsymbol k=\boldsymbol l`$, it is identically one.
 
@@ -210,7 +210,7 @@ Its absolute value is one. If $`\boldsymbol k=\boldsymbol l`$, it is identically
 
 Consider one off-diagonal pair. Its eight resource terms sum to
 
-$$
+```math
 R_{\boldsymbol k\boldsymbol l}
 =s_{\boldsymbol k}s_{\boldsymbol l}
 \left(
@@ -219,7 +219,7 @@ R_{\boldsymbol k\boldsymbol l}
 +|a_{\boldsymbol l}b_{\boldsymbol l}\rangle
 \langle a_{\boldsymbol k}b_{\boldsymbol k}|
 \right).
-$$
+```
 
 Assign the same score $`h_{\boldsymbol k\boldsymbol l}`$ to all eight underlying physical resource terms. Their positive diagonal pieces cancel in the signed sum separately for every Bell-outcome string. Thus the calculation can be performed on $`R_{\boldsymbol k\boldsymbol l}`$ itself. Each of its two matrix units accumulates the same commutation sign $`h_{\boldsymbol k\boldsymbol l}`$. Multiplication by that sign cancels it exactly.
 
@@ -239,37 +239,37 @@ A local cat between two product Bell-basis strings can be prepared from the two 
 
 The coefficient distribution also has a short sampler. Put
 
-$$
+```math
 S_j=\sum_\alpha|u_{j\alpha}|,
 \qquad
 q_{j\alpha}=\frac{|u_{j\alpha}|}{S_j},
 \qquad
 S=\prod_jS_j=\sqrt{\chi_I}.
-$$
+```
 
 The diagonal terms have total weight one; conditioned on that part of the sampling distribution, draw $`\boldsymbol k`$ independently with probabilities $`|u_{jk_j}|^2`$. The off-diagonal terms have total weight $`2(\chi_I-1)`$; conditioned on that part, draw an unordered distinct pair with probability
 
-$$
+```math
 \frac{2s_{\boldsymbol k}s_{\boldsymbol l}}{\chi_I-1},
-$$
+```
 
 and choose a common $`X`$ or $`Y`$ cat axis and two independent signs according to the eight-term decomposition. The outer branch probabilities are these total weights divided by $`2\chi_I-1`$.
 
 To draw the distinct pair without enumerating $`4^m`$ strings or relying on repeated trials when the gates are weak, define
 
-$$
+```math
 c_j=\sum_\alpha q_{j\alpha}^2,
 \qquad
 T_j=\prod_{t=j}^m c_t,
 \qquad T_{m+1}=1.
-$$
+```
 
 Draw an ordered pair of strings from the product distribution $`q\otimes q`$, conditioned on the strings differing. Before their first differing position, the conditional probability of labels $`\alpha,\beta`$ at position $`j`$ is
 
-$$
+```math
 \frac{q_{j\alpha}q_{j\beta}
 \left(1-\mathbf 1_{\alpha=\beta}T_{j+1}\right)}{1-T_j}.
-$$
+```
 
 After a difference has occurred, draw the remaining labels independently. The denominator is nonzero whenever this conditioned state is reached. Forgetting the order gives the required unordered distribution. If $`\chi_I=1`$, no off-diagonal branch is present. There are only sixteen candidate label pairs per position, so the sampler needs $`O(m)`$ elementary probability updates and $`O(m)`$ storage given the KAK coefficients. Numerical arithmetic and rotation synthesis must, as usual, be performed at the precision required by the desired implementation accuracy.
 
@@ -283,10 +283,10 @@ The interval extents multiply, giving $`\prod_I(2\chi_I-1)`$ and matching the lo
 
 For CNOT, $`\chi_j=2`$, so its gate-slot reset law has the same factors as the qubit-wire law. For SWAP, $`\chi_j=4`$. A product unitary has $`\chi_j=1`$ and contributes no additional extent. For the entangling family $`\exp(-i\theta Z\otimes Z)`$,
 
-$$
+```math
 \chi_j=(|\cos\theta|+|\sin\theta|)^2
 =1+|\sin2\theta|,
-$$
+```
 
 which also displays the continuous weak-interaction limit of the exact formula.
 
