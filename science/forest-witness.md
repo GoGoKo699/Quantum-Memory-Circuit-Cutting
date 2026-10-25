@@ -8,58 +8,58 @@ For a forest whose edges carry pure bipartite states, the optimal signed decompo
 
 Let $`G=(V,E)`$ be a finite undirected forest. For each edge $`e=\{v,w\}`$, give its two endpoints finite-dimensional spaces $`\mathcal H_{v,e}`$ and $`\mathcal H_{w,e}`$. The complete space of vertex $`v`$ is
 
-$$
+```math
 \mathcal H_v=\bigotimes_{e\ni v}\mathcal H_{v,e}.
-$$
+```
 
 An individual vertex state may be entangled among all its incident registers. Full separability refers only to the partition into the spaces $`\mathcal H_v`$:
 
-$$
+```math
 \mathrm{Sep}(V)
 =\mathrm{conv}\left\{\bigotimes_{v\in V}\rho_v:
 \rho_v\geq0,\ \mathrm{Tr}\rho_v=1\right\}.
-$$
+```
 
 For a density operator $`\rho`$, define its signed separable extent by
 
-$$
+```math
 \Gamma_{\mathrm{Sep}(V)}(\rho)
 =\inf\left\{\sum_\ell|a_\ell|:
 \rho=\sum_\ell a_\ell\sigma_\ell,
 \quad a_\ell\in\mathbb R,
 \quad \sigma_\ell\in\mathrm{Sep}(V)\right\}.
-$$
+```
 
 Each edge has a normalized pure state with Schmidt decomposition
 
-$$
+```math
 |\psi_e\rangle
 =\sum_{i=1}^{r_e}s_{e i}
 |a_{e i}\rangle|b_{e i}\rangle,
 \qquad s_{e i}>0,
 \qquad \sum_i s_{e i}^{2}=1.
-$$
+```
 
 The endpoint dimensions may exceed $`r_e`$. Define
 
-$$
+```math
 S_e=\sum_i s_{e i},
 \qquad g_e=2S_e^2-1,
 \qquad
 \rho_G=\bigotimes_{e\in E}|\psi_e\rangle\langle\psi_e|.
-$$
+```
 
 The tensor factors of $`\rho_G`$ are regrouped by vertices when evaluating separability.
 
 **Theorem 1 — Pure-edge forest identity.** For every such forest,
 
-$$
+```math
 \boxed{
 \Gamma_{\mathrm{Sep}(V)}(\rho_G)
 =\prod_{e\in E}g_e
 =\prod_{e\in E}\left[2\left(\sum_i s_{e i}\right)^2-1\right].
 }
-$$
+```
 
 An empty product equals one. Product states on any additional isolated vertex do not change the value.
 
@@ -67,87 +67,87 @@ An empty product equals one. Product states on any additional isolated vertex do
 
 Introduce the unnormalized vector on the Schmidt support,
 
-$$
+```math
 |\Omega_e\rangle
 =\sum_{i=1}^{r_e}|a_{e i}\rangle|b_{e i}\rangle,
 \qquad
 W_e=2|\Omega_e\rangle\langle\Omega_e|-I.
-$$
+```
 
 The identity acts on the full endpoint space, including directions outside the Schmidt support. This choice is necessary when the local Choi space is larger than the operator Schmidt rank of a gate.
 
 **Lemma 2 — Leaf contraction.** Let $`R`$ be any Hermitian operator on one endpoint of an edge, and define
 
-$$
+```math
 M=\mathrm{Tr}_{v,e}[(R\otimes I)W_e].
-$$
+```
 
 Then $`M`$ is Hermitian and
 
-$$
+```math
 \|M\|_\infty\leq\|R\|_1.
-$$
+```
 
 **Proof.** Fix a unit vector $`|z\rangle`$ at the other endpoint and set
 
-$$
+```math
 |\widetilde z\rangle
 =\sum_{i=1}^{r_e}\langle z|b_{e i}\rangle|a_{e i}\rangle.
-$$
+```
 
 Orthonormality gives $`\|\widetilde z\|\leq1`$. Direct contraction yields
 
-$$
+```math
 \langle z|M|z\rangle
 =\mathrm{Tr}\left[
 R\left(2|\widetilde z\rangle\langle\widetilde z|-I\right)
 \right].
-$$
+```
 
 The operator in parentheses has eigenvalue $`2\|\widetilde z\|^2-1`$ in the direction of $`\widetilde z`$ and eigenvalue $`-1`$ on its orthogonal complement. Its operator norm is at most one. Trace-norm duality therefore gives
 
-$$
+```math
 |\langle z|M|z\rangle|\leq\|R\|_1.
-$$
+```
 
 The expression is real for every $`z`$, so $`M`$ is Hermitian, and taking the supremum proves the claim. Equivalently, Hermiticity follows from cyclicity of the partial trace with respect to operators on the traced subsystem. $`\square`$
 
 If the Schmidt support fills both endpoint spaces and corresponding Schmidt bases are identified, the contraction has the particularly simple form
 
-$$
+```math
 M=2R^{\mathsf T}-\mathrm{Tr}(R)I.
-$$
+```
 
 For eigenvalues $`r_i`$ of $`R`$, the required estimate is then
 
-$$
+```math
 \left|2r_i-\sum_jr_j\right|
 =\left|r_i-\sum_{j\ne i}r_j\right|
 \leq\sum_j|r_j|.
-$$
+```
 
 The proof needs the bound for all Hermitian $`R`$, rather than only positive $`R`$, because eliminating an earlier leaf can produce a signed operator at its neighbor.
 
 **Lemma 3 — Absorbing a message.** If $`M`$ is Hermitian on $`\mathcal K`$ and $`S`$ is Hermitian on $`\mathcal K\otimes\mathcal L`$, then
 
-$$
+```math
 R'=\mathrm{Tr}_{\mathcal K}[(M\otimes I)S]
-$$
+```
 
 is Hermitian and satisfies
 
-$$
+```math
 \|R'\|_1\leq\|M\|_\infty\|S\|_1.
-$$
+```
 
 **Proof.** For any Hermitian $`H`$ on $`\mathcal L`$ with $`\|H\|_\infty\leq1`$,
 
-$$
+```math
 |\mathrm{Tr}(HR')|
 =|\mathrm{Tr}[(M\otimes H)S]|
 \leq\|M\otimes H\|_\infty\|S\|_1
 \leq\|M\|_\infty\|S\|_1.
-$$
+```
 
 Taking the dual supremum gives the result. Partial-trace cyclicity gives Hermiticity. $`\square`$
 
@@ -155,17 +155,17 @@ Taking the dual supremum gives the result. Partial-trace cyclicity gives Hermiti
 
 Define
 
-$$
+```math
 W_G=\bigotimes_{e\in E}W_e.
-$$
+```
 
 **Lemma 4 — Product-vertex bound.** For any normalized vertex density operators,
 
-$$
+```math
 \left|\mathrm{Tr}\left[
 W_G\bigotimes_{v\in V}\rho_v
 \right]\right|\leq1.
-$$
+```
 
 **Proof.** Work first on a connected tree. Initially assign the Hermitian operator $`R_v=\rho_v`$ to every vertex, so $`\|R_v\|_1=1`$. Choose a leaf $`v`$, with neighbor $`w`$ and edge $`e`$. Contract $`R_v`$ through $`W_e`$ to obtain a Hermitian operator $`M`$ on the corresponding register of $`w`$. Lemma 2 gives $`\|M\|_\infty\leq1`$. Absorb $`M`$ into $`R_w`$ and trace that register. Lemma 3 gives a new Hermitian operator on the remaining registers of $`w`$ with trace norm at most one.
 
@@ -173,19 +173,19 @@ The scalar tensor contraction is unchanged. Removing $`v`$ and $`e`$ leaves a sm
 
 Convexity extends the bound to every $`\sigma\in\mathrm{Sep}(V)`$. The target expectation is
 
-$$
+```math
 \mathrm{Tr}(W_G\rho_G)
 =\prod_e\langle\psi_e|W_e|\psi_e\rangle
 =\prod_e(2S_e^2-1),
-$$
+```
 
 because $`\langle\Omega_e|\psi_e\rangle=S_e`$. Therefore every signed separable decomposition obeys
 
-$$
+```math
 \prod_e g_e
 =\sum_\ell a_\ell\mathrm{Tr}(W_G\sigma_\ell)
 \leq\sum_\ell|a_\ell|.
-$$
+```
 
 This proves the lower bound in Theorem 1.
 
@@ -193,60 +193,60 @@ This proves the lower bound in Theorem 1.
 
 It is enough to construct a single-edge decomposition. Suppress the edge label. For $`i<j`$, define on the first endpoint
 
-$$
+```math
 X_{ij}^{A}=|a_i\rangle\langle a_j|+|a_j\rangle\langle a_i|,
 \qquad
 Y_{ij}^{A}=-i|a_i\rangle\langle a_j|+i|a_j\rangle\langle a_i|,
-$$
+```
 
 and define $`X_{ij}^{B},Y_{ij}^{B}`$ in the corresponding $`b`$ basis. Then
 
-$$
+```math
 |\psi\rangle\langle\psi|
 =\sum_i s_i^2
 |a_i\rangle\langle a_i|\otimes|b_i\rangle\langle b_i|
  +\frac12\sum_{i<j}s_i s_j
 \left(X_{ij}^{A}\otimes X_{ij}^{B}
 -Y_{ij}^{A}\otimes Y_{ij}^{B}\right).
-$$
+```
 
 Each $`X`$ is a difference of the two normalized projectors onto
 
-$$
+```math
 |x_{ij}^{\pm}\rangle
 =\frac{|a_i\rangle\pm|a_j\rangle}{\sqrt2},
-$$
+```
 
 and each $`Y`$ is a difference of the projectors onto
 
-$$
+```math
 |y_{ij}^{\pm}\rangle
 =\frac{|a_i\rangle\pm i|a_j\rangle}{\sqrt2}.
-$$
+```
 
 The same identities hold at the second endpoint. Consequently each pair $`i<j`$ contributes eight signed product density operators, each with coefficient magnitude $`s_i s_j/2`$. The total coefficient extent is
 
-$$
+```math
 \sum_i s_i^2+4\sum_{i<j}s_i s_j
 =2\left(\sum_i s_i\right)^2-1.
-$$
+```
 
 Tensor these decompositions over edges. Each resulting term is a product of endpoint density operators. Group all factors incident on a common vertex; this produces a normalized state at that vertex. The overall term is therefore fully separable over vertices, and its extent is the product of the single-edge extents. This proves the upper bound and completes Theorem 1. $`\square`$
 
 The proof also identifies the exact relation with standard robustness. If
 
-$$
+```math
 R_{\mathrm{Sep}(V)}(\rho)
 =\inf\left\{t\geq0:
 \rho=(1+t)\sigma_+-t\sigma_-,
 \quad \sigma_\pm\in\mathrm{Sep}(V)\right\},
-$$
+```
 
 then collecting the positive and negative terms of any decomposition, and using $`\mathrm{Tr}\rho=1`$, gives
 
-$$
+```math
 \Gamma_{\mathrm{Sep}(V)}(\rho)=1+2R_{\mathrm{Sep}(V)}(\rho).
-$$
+```
 
 Both the positive and the negative normalized states must be separable. Replacing the negative state by an arbitrary density operator defines a different robustness and is not the norm evaluated here.
 
@@ -256,19 +256,19 @@ The leaf argument cannot be extended to arbitrary graphs. Consider a four-cycle 
 
 A computational-basis contraction gives
 
-$$
+```math
 \mathrm{Tr}\left[\sigma\prod_{e\in S}\Phi_e\right]
 =4^{-|S|}
 \quad\text{for every proper subset }S\subsetneq E,
-$$
+```
 
 whereas projecting all four edges closes the loop and gives $`4^{-3}`$. Expanding the four witness factors therefore yields
 
-$$
+```math
 \mathrm{Tr}(W_G\sigma)
 =\sum_{k=0}^{3}\binom4k(-1)^{4-k}+4^4\,4^{-3}
 =-1+4=3.
-$$
+```
 
 Thus $`W_G`$ is not bounded by one on product-vertex states for this cycle. This calculation does not establish the optimal decomposition norm on cyclic graphs; it establishes the precise boundary of the forest witness used here.
 

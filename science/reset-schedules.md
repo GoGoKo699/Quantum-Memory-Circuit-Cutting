@@ -14,20 +14,20 @@ The break is a genuine local measure-and-prepare connection, conditional on the 
 
 Let $`\mathcal I=\mathcal P_A\wedge\mathcal P_B`$ be the common refinement. Thus an interval of $`\mathcal I`$ ends whenever either laboratory has a boundary. For each $`I\in\mathcal I`$, write
 
-$$
+```math
 D_I=\prod_{j\in I}d_j,
 \qquad
 G=\prod_{I\in\mathcal I}(2D_I-1).
-$$
+```
 
 **Theorem 1 — Exact common-refinement law.** In the prescribed-reset model,
 
-$$
+```math
 \boxed{
 \Gamma_{\mathcal P_A,\mathcal P_B}(\mathrm{Id}_{\mathrm{stream}})
 =\prod_{I\in\mathcal I}(2D_I-1).
 }
-$$
+```
 
 The converse permits arbitrary quantum memory within each epoch and arbitrary two-way classical feedback. A protocol with one persistent qubit at each laboratory inside each common interval attains the value. Each persistent qubit is returned exactly to a fixed pure state and is decoupled from the data at the end of that interval. Transient input and resource registers are additional physical systems, as detailed in the construction.
 
@@ -47,23 +47,23 @@ The following argument establishes the bridge from a causal circuit to the graph
 
 Prepare a normalized maximally entangled pair for every slot input. Release its input half at the required slot, retain its reference, and retain every returned output without feeding it back. This is a valid causal tester. Denote the resulting normalized Choi operator of a physical instrument branch by $`J(\mathcal C_h)`$. Determinism of the sum of the branches gives
 
-$$
+```math
 J(\mathcal C_h)\geq0,
 \qquad
 \sum_h\mathrm{Tr}J(\mathcal C_h)=1.
-$$
+```
 
 The references and outputs belonging to a laboratory during one epoch form that epoch's vertex space. A wire contributes its sender's input reference and its receiver's output to the two endpoints of its edge. Reversing the wire direction changes these port names but leaves the bipartite maximally entangled target unchanged.
 
 **Proposition 3 — Refined-branch factorization.** For every allowed finite-round physical instrument, there is a refinement $`t`$ of its classical branches such that
 
-$$
+```math
 J(\mathcal C_h)
 =\sum_{t:\,h(t)=h}
 p_t\bigotimes_{v\in V}\rho_{v,t},
 \qquad p_t\geq0,
 \qquad \sum_t p_t=1,
-$$
+```
 
 where every $`\rho_{v,t}`$ is a normalized positive operator on one epoch's Choi registers.
 
@@ -71,18 +71,18 @@ where every $`\rho_{v,t}`$ is a normalized positive operator on one epoch's Choi
 
 An entanglement-breaking channel on the entire memory has a measure-and-prepare representation
 
-$$
+```math
 \mathcal E(X)=\sum_z\mathrm{Tr}(E_zX)\,\tau_z,
 \qquad E_z\geq0,
 \qquad \sum_zE_z=I.
-$$
+```
 
 This characterization is established in [Horodecki, Shor, and Ruskai](https://arxiv.org/abs/quant-ph/0302031). Spectrally decompose each $`E_z`$ and $`\tau_z`$. The resulting Kraus operators can be chosen rank one,
 
-$$
+```math
 K_{zab}=\sqrt{e_{za}t_{zb}}\,
 |u_{zb}\rangle\langle v_{za}|.
-$$
+```
 
 Refine the transcript by these Kraus labels, even if they are physically hidden. For a converse it is legitimate to expose this information: doing so grants additional classical information and cannot make the allowed simulation class smaller.
 
@@ -92,10 +92,10 @@ The strict port schedule matters at this step. A future input has never been acc
 
 Vectorizing the fixed component maps gives a product of positive Choi operators,
 
-$$
+```math
 J_t=\bigotimes_v Q_{v,t},
 \qquad Q_{v,t}\geq0.
-$$
+```
 
 Scalar probabilities from classical choices and the normalization of the Bell inputs can be included in these factors. Set $`p_t=\mathrm{Tr}J_t`$. For a nonzero branch, divide each factor by its trace to obtain $`J_t=p_t\bigotimes_v\rho_{v,t}`$. Branches with $`p_t=0`$ can be omitted. Summing all refined branches reproduces the physical deterministic Choi operator, so $`\sum_t p_t=1`$. $`\square`$
 
@@ -107,41 +107,41 @@ Arbitrary two-way feedback is included: conditioning on the full transcript chan
 
 A scored atom has the form
 
-$$
+```math
 \mathcal F=\sum_h s_h\mathcal C_h,
 \qquad |s_h|\leq1.
-$$
+```
 
 Proposition 3 gives
 
-$$
+```math
 J(\mathcal F)
 =\sum_t s_{h(t)}p_t\bigotimes_v\rho_{v,t}.
-$$
+```
 
 The normalized successful branch of a postselection cannot be inserted without its success probability: the factor $`p_t`$ is part of the physical Choi operator. This is why the converse remains valid even when a protocol uses rare outcomes or postpones its scoring until the final record is available.
 
 For each common interval, let $`\Phi_{D_I}`$ be its maximally entangled edge state and define
 
-$$
+```math
 W_I=2D_I\Phi_{D_I}-I,
 \qquad W=\bigotimes_{I\in\mathcal I}W_I.
-$$
+```
 
 The forest witness gives $`|\mathrm{Tr}[W\bigotimes_v\rho_{v,t}]|\leq1`$. Consequently
 
-$$
+```math
 |\mathrm{Tr}[WJ(\mathcal F)]|
 \leq\sum_t|s_{h(t)}|p_t
 \leq1.
-$$
+```
 
 The ideal open wire process has Choi state $`\bigotimes_j\Phi_{d_j}`$. Regrouping slots within a common interval identifies $`\bigotimes_{j\in I}\Phi_{d_j}`$ with $`\Phi_{D_I}`$. Hence
 
-$$
+```math
 \mathrm{Tr}[WJ(\mathrm{Id}_{\mathrm{stream}})]
 =\prod_{I\in\mathcal I}(2D_I-1)=G.
-$$
+```
 
 Applying the witness to any exact signed decomposition proves $`\Gamma\geq G`$.
 
@@ -157,17 +157,17 @@ The factor $`2D_I-1`$ is the established collective wire-cutting optimum; see [B
 
 If either laboratory has a boundary at every slot gap, every common interval is a singleton. Therefore
 
-$$
+```math
 \Gamma=\prod_{j=1}^n(2d_j-1),
-$$
+```
 
 even if the other laboratory has arbitrarily large coherent memory throughout all $`n`$ slots. For qubit wires this is $`3^n`$.
 
 If neither side has a boundary, there is one common interval. Writing $`D=\prod_jd_j`$ gives
 
-$$
+```math
 \Gamma=2D-1.
-$$
+```
 
 For qubit wires, one persistent qubit at each side therefore attains $`2^{n+1}-1`$, while complete loss of persistent coherence on either side gives $`3^n`$. These are statements about the specified streaming interface, not a general quantum-memory capacity bound.
 
@@ -175,18 +175,18 @@ For qubit wires, one persistent qubit at each side therefore attains $`2^{n+1}-1
 
 Let $`n`$ be even. Suppose Alice's epochs are $`(1,2),(3,4),\ldots`$. If Bob uses the same partition, every common interval has two qubit slots and
 
-$$
+```math
 \Gamma_{\mathrm{aligned}}=7^{n/2}.
-$$
+```
 
 If Bob's partition is shifted by one slot, with singleton intervals at the two ends, then a boundary occurs on one side at every gap. Every common interval is a singleton and
 
-$$
+```math
 \Gamma_{\mathrm{staggered}}=3^n,
 \qquad
 \frac{\Gamma_{\mathrm{staggered}}}{\Gamma_{\mathrm{aligned}}}
 =\left(\frac97\right)^{n/2}.
-$$
+```
 
 Both laboratories have maximum epoch length two in both cases. Their relative reset timing changes the extent exponentially. In the standard bounded-weight Monte Carlo estimate, the corresponding squared-extent overhead ratio is $`(9/7)^n`$; this is not a sample lower bound for arbitrary algorithms.
 
@@ -196,10 +196,10 @@ For a finite example, take six qubit slots with Alice epochs $`(1,2,3),(4,5,6)`$
 
 The exact exponential distinction survives a fixed small approximation error within the same universal QPD class. With half strategy-distance error at most $`\epsilon`$, the unconditional witness bound is $`\Gamma\geq(1-2\epsilon)G`$. If the approximating Choi operator also has trace one, the sharper bound is
 
-$$
+```math
 \Gamma\geq G\left[1-\left(1+\frac1{c_{\min}}\right)\epsilon\right],
 \qquad c_{\min}=\min_{I\in\mathcal I}(2D_I-1).
-$$
+```
 
 The norm conventions, trace-normalization requirement, and proof are given in [Precision and calibration](precision-calibration.md).
 
