@@ -119,7 +119,7 @@ The two output states are orthogonal because $`x_\ell\ne y_\ell`$, so this isome
 
 For qubits, the final transfer is a SWAP between the memory and a fresh output qubit, followed by a known bit flip if needed. Intermediate emission uses controlled bit flips. The four allowed phases use only Hadamard and phase gates. The resource-generation circuit therefore has $`O(m)`$ local Clifford gates for qubit wires.
 
-**Clean-return property.** The final isometry maps the entire two-dimensional input space of $`M`$ into $`|0\rangle_M\otimes\operatorname{span}\{|x_\ell\rangle,|y_\ell\rangle\}`$. Therefore it resets $`M`$ to a fixed pure state for every joint state of $`M`$ and any reference system. This remains true if earlier emitted ports have already been measured, corrected, or coupled to external data, and also after conditioning on any earlier instrument outcomes. Clean return does not rely on preserving an unmeasured cat state until the interval ends.
+**Clean-return property.** The final isometry maps the entire two-dimensional input space of $`M`$ into $`|0\rangle_M\otimes\mathrm{span}\{|x_\ell\rangle,|y_\ell\rangle\}`$. Therefore it resets $`M`$ to a fixed pure state for every joint state of $`M`$ and any reference system. This remains true if earlier emitted ports have already been measured, corrected, or coupled to external data, and also after conditioning on any earlier instrument outcomes. Clean return does not rely on preserving an unmeasured cat state until the interval ends.
 
 If $`f=\ell`$, the same preparation and transfer occur in one slot. If the sampled resource is a basis string, no coherent branch memory is needed at all.
 
@@ -166,7 +166,7 @@ This establishes equality as an open comb, rather than only equality of a final 
 
 ## 6. A finite memoryless qubit protocol
 
-For one qubit, the extent-three result also has a direct measure-and-prepare interpretation. Choose one of the Pauli bases uniformly. Measure the input in that basis and prepare either the measured eigenstate or its opposite. Let the two resulting channels be $`\mathcal E_+`$ and $`\mathcal E_-`$. Writing $`\mathcal D(\rho)=I\operatorname{Tr}(\rho)/2`$, their Bloch-vector actions give
+For one qubit, the extent-three result also has a direct measure-and-prepare interpretation. Choose one of the Pauli bases uniformly. Measure the input in that basis and prepare either the measured eigenstate or its opposite. Let the two resulting channels be $`\mathcal E_+`$ and $`\mathcal E_-`$. Writing $`\mathcal D(\rho)=I\mathrm{Tr}(\rho)/2`$, their Bloch-vector actions give
 
 $$
 \mathcal E_+=\frac{\mathrm{Id}+2\mathcal D}{3},

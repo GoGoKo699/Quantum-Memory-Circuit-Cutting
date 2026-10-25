@@ -50,7 +50,7 @@ Prepare a normalized maximally entangled pair for every slot input. Release its 
 $$
 J(\mathcal C_h)\geq0,
 \qquad
-\sum_h\operatorname{Tr}J(\mathcal C_h)=1.
+\sum_h\mathrm{Tr}J(\mathcal C_h)=1.
 $$
 
 The references and outputs belonging to a laboratory during one epoch form that epoch's vertex space. A wire contributes its sender's input reference and its receiver's output to the two endpoints of its edge. Reversing the wire direction changes these port names but leaves the bipartite maximally entangled target unchanged.
@@ -72,7 +72,7 @@ where every $`\rho_{v,t}`$ is a normalized positive operator on one epoch's Choi
 An entanglement-breaking channel on the entire memory has a measure-and-prepare representation
 
 $$
-\mathcal E(X)=\sum_z\operatorname{Tr}(E_zX)\,\tau_z,
+\mathcal E(X)=\sum_z\mathrm{Tr}(E_zX)\,\tau_z,
 \qquad E_z\geq0,
 \qquad \sum_zE_z=I.
 $$
@@ -97,7 +97,7 @@ J_t=\bigotimes_v Q_{v,t},
 \qquad Q_{v,t}\geq0.
 $$
 
-Scalar probabilities from classical choices and the normalization of the Bell inputs can be included in these factors. Set $`p_t=\operatorname{Tr}J_t`$. For a nonzero branch, divide each factor by its trace to obtain $`J_t=p_t\bigotimes_v\rho_{v,t}`$. Branches with $`p_t=0`$ can be omitted. Summing all refined branches reproduces the physical deterministic Choi operator, so $`\sum_t p_t=1`$. $`\square`$
+Scalar probabilities from classical choices and the normalization of the Bell inputs can be included in these factors. Set $`p_t=\mathrm{Tr}J_t`$. For a nonzero branch, divide each factor by its trace to obtain $`J_t=p_t\bigotimes_v\rho_{v,t}`$. Branches with $`p_t=0`$ can be omitted. Summing all refined branches reproduces the physical deterministic Choi operator, so $`\sum_t p_t=1`$. $`\square`$
 
 This is a separability statement about the normalized Choi test, not a claim that the entire experiment becomes independent across epochs. The external tester can correlate actual inputs in a general experiment. The particular independent-Bell-input tester suffices for the lower bound because the cutting identity is required to hold for every tester.
 
@@ -128,10 +128,10 @@ W_I=2D_I\Phi_{D_I}-I,
 \qquad W=\bigotimes_{I\in\mathcal I}W_I.
 $$
 
-The forest witness gives $`|\operatorname{Tr}[W\bigotimes_v\rho_{v,t}]|\leq1`$. Consequently
+The forest witness gives $`|\mathrm{Tr}[W\bigotimes_v\rho_{v,t}]|\leq1`$. Consequently
 
 $$
-|\operatorname{Tr}[WJ(\mathcal F)]|
+|\mathrm{Tr}[WJ(\mathcal F)]|
 \leq\sum_t|s_{h(t)}|p_t
 \leq1.
 $$
@@ -139,7 +139,7 @@ $$
 The ideal open wire process has Choi state $`\bigotimes_j\Phi_{d_j}`$. Regrouping slots within a common interval identifies $`\bigotimes_{j\in I}\Phi_{d_j}`$ with $`\Phi_{D_I}`$. Hence
 
 $$
-\operatorname{Tr}[WJ(\mathrm{Id}_{\mathrm{stream}})]
+\mathrm{Tr}[WJ(\mathrm{Id}_{\mathrm{stream}})]
 =\prod_{I\in\mathcal I}(2D_I-1)=G.
 $$
 

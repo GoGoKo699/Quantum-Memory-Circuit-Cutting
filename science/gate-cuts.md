@@ -40,7 +40,7 @@ If $`L`$ is unitary, this vector has norm one. In particular,
 
 $$
 \langle\!\langle L|M\rangle\!\rangle
-=\frac12\operatorname{Tr}(L^\dagger M).
+=\frac12\mathrm{Tr}(L^\dagger M).
 $$
 
 The normalized gate Choi vector is

@@ -162,9 +162,9 @@ E_r=\frac1{144}
 To derive (D12), first note that every local one-qubit marginal of $`\chi_\eta`$ is maximally mixed. Consequently each spatial Bell fidelity is $`1/4`$. The joint Bell fidelity is
 
 ```math
-\operatorname{Tr}[(\Phi_{A_1B_1}\otimes\Phi_{A_2B_2})
+\mathrm{Tr}[(\Phi_{A_1B_1}\otimes\Phi_{A_2B_2})
  (\chi_{\eta_A}\otimes\chi_{\eta_B})]
-=\frac14\operatorname{Tr}(\chi_{\eta_A}\chi_{\eta_B}^{T})
+=\frac14\mathrm{Tr}(\chi_{\eta_A}\chi_{\eta_B}^{T})
 =\frac{1+r}{8}.
 \tag{D14}
 ```
@@ -262,7 +262,7 @@ C(\chi_\eta)=\eta,\qquad C_a(\chi_\eta)=1.
 \tag{D21}
 ```
 
-**Proof.** Every pure vector in any decomposition of $`\chi_\eta`$ lies in $`\operatorname{span}\{|00\rangle,|11\rangle\}`$, since the density matrix has no support outside it. For a vector $`\alpha|00\rangle+\beta|11\rangle`$, the concurrence is $`2|\alpha\beta|`$. The triangle inequality applied to the $`00,11`$ matrix element gives an average concurrence at least $`\eta`$. Choose $`\theta\in[0,\pi/4]`$ with $`\sin2\theta=\eta`$. The equal mixture of
+**Proof.** Every pure vector in any decomposition of $`\chi_\eta`$ lies in $`\mathrm{span}\{|00\rangle,|11\rangle\}`$, since the density matrix has no support outside it. For a vector $`\alpha|00\rangle+\beta|11\rangle`$, the concurrence is $`2|\alpha\beta|`$. The triangle inequality applied to the $`00,11`$ matrix element gives an average concurrence at least $`\eta`$. Choose $`\theta\in[0,\pi/4]`$ with $`\sin2\theta=\eta`$. The equal mixture of
 
 ```math
 \cos\theta|00\rangle+\sin\theta|11\rangle,
@@ -278,7 +278,7 @@ For invertible $`2\times2`$ matrices $`A,B`$, let
 
 ```math
 \rho'=\frac{(A\otimes B)\rho(A\otimes B)^\dagger}{p},
-\quad p=\operatorname{Tr}[(A\otimes B)\rho(A\otimes B)^\dagger]>0.
+\quad p=\mathrm{Tr}[(A\otimes B)\rho(A\otimes B)^\dagger]>0.
 ```
 
 Then
@@ -298,7 +298,7 @@ Define the convex set
 
 ```math
 \mathcal K_\eta
-=\{\rho\geq0:\operatorname{Tr}\rho=1,
+=\{\rho\geq0:\mathrm{Tr}\rho=1,
 \ C(\rho)\leq\eta C_a(\rho)\}.
 \tag{D23}
 ```
@@ -376,8 +376,8 @@ The lower bound needs no cone restriction. With the spin-flipped state $`\wideti
 
 ```math
 F_r(\sigma,\tau)
-=2(1+r)\operatorname{Tr}(\sigma\tau)
-+2(1-r)\operatorname{Tr}(\sigma\widetilde\tau)-1
+=2(1+r)\mathrm{Tr}(\sigma\tau)
++2(1-r)\mathrm{Tr}(\sigma\widetilde\tau)-1
 \geq-1.
 \tag{D30}
 ```
@@ -403,7 +403,7 @@ The expectations of $`W_1,W_2,W_1W_2`$ are respectively
 $`a_\sigma\cdot a_{\tau^T}`$, $`b_\sigma\cdot b_{\tau^T}`$, and $`T_\sigma:T_{\tau^T}`$. Full transposition preserves both concurrence roofs. Therefore (D29) and (D30) give
 
 ```math
-\left|\operatorname{Tr}[Q_r(\sigma\otimes\tau)]\right|
+\left|\mathrm{Tr}[Q_r(\sigma\otimes\tau)]\right|
 =\left|\frac{F_r(\sigma,\tau^T)-r}{1+r}\right|
 \leq1.
 \tag{D32}
@@ -433,7 +433,7 @@ Because the Bell probes are normalized and the physical instrument is complete,
 For a scored atom (D3), equations (D32)–(D34) yield
 
 ```math
-\left|\operatorname{Tr}[Q_rJ(\mathcal F)]\right|
+\left|\mathrm{Tr}[Q_rJ(\mathcal F)]\right|
 \leq\sum_h |s_h|p_h\leq1.
 \tag{D35}
 ```
@@ -443,7 +443,7 @@ This proves the bound even for arbitrary adaptive classical communication and bo
 The ideal comb has normalized Choi state $`J_0=\Phi\otimes\Phi`$. Thus
 
 ```math
-\operatorname{Tr}(Q_rJ_0)=\frac{9+5r}{1+r}.
+\mathrm{Tr}(Q_rJ_0)=\frac{9+5r}{1+r}.
 \tag{D36}
 ```
 

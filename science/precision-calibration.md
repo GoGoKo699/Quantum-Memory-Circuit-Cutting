@@ -39,14 +39,14 @@ The reconstructed signed process can be Hermiticity preserving without being com
 
 ## 2. Approximation bounds from witness spectral ranges
 
-Let $`W`$ be a valid extent witness: $`|\operatorname{Tr}[WJ(\mathcal F)]|\leq1`$ for every allowed scored atom. Put $`J_0=J(\mathcal T)`$, $`G=\operatorname{Tr}(WJ_0)`$, and let $`\widetilde J`$ be the reconstructed Choi operator. Any decomposition producing $`\widetilde J`$ has extent at least $`\operatorname{Tr}(W\widetilde J)`$.
+Let $`W`$ be a valid extent witness: $`|\mathrm{Tr}[WJ(\mathcal F)]|\leq1`$ for every allowed scored atom. Put $`J_0=J(\mathcal T)`$, $`G=\mathrm{Tr}(WJ_0)`$, and let $`\widetilde J`$ be the reconstructed Choi operator. Any decomposition producing $`\widetilde J`$ has extent at least $`\mathrm{Tr}(W\widetilde J)`$.
 
-Suppose first that $`\operatorname{Tr}\widetilde J=\operatorname{Tr}J_0=1`$. Exact deterministic trace normalization of the reconstructed process is sufficient; the argument itself needs only this Bell-test trace equality. For $`E=\widetilde J-J_0`$, $`\operatorname{Tr}E=0`$, so
+Suppose first that $`\mathrm{Tr}\widetilde J=\mathrm{Tr}J_0=1`$. Exact deterministic trace normalization of the reconstructed process is sufficient; the argument itself needs only this Bell-test trace equality. For $`E=\widetilde J-J_0`$, $`\mathrm{Tr}E=0`$, so
 
 ```math
 \begin{aligned}
-|\operatorname{Tr}(WE)|
-&=\left|\operatorname{Tr}\left[
+|\mathrm{Tr}(WE)|
+&=\left|\mathrm{Tr}\left[
 \left(W-\frac{\lambda_{\max}+\lambda_{\min}}2I\right)E\right]\right|\\
 &\leq\frac{\lambda_{\max}-\lambda_{\min}}2\|E\|_1.
 \end{aligned}

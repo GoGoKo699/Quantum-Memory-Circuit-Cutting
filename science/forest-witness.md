@@ -15,19 +15,19 @@ $$
 An individual vertex state may be entangled among all its incident registers. Full separability refers only to the partition into the spaces $`\mathcal H_v`$:
 
 $$
-\operatorname{Sep}(V)
-=\operatorname{conv}\left\{\bigotimes_{v\in V}\rho_v:
-\rho_v\geq0,\ \operatorname{Tr}\rho_v=1\right\}.
+\mathrm{Sep}(V)
+=\mathrm{conv}\left\{\bigotimes_{v\in V}\rho_v:
+\rho_v\geq0,\ \mathrm{Tr}\rho_v=1\right\}.
 $$
 
 For a density operator $`\rho`$, define its signed separable extent by
 
 $$
-\Gamma_{\operatorname{Sep}(V)}(\rho)
+\Gamma_{\mathrm{Sep}(V)}(\rho)
 =\inf\left\{\sum_\ell|a_\ell|:
 \rho=\sum_\ell a_\ell\sigma_\ell,
 \quad a_\ell\in\mathbb R,
-\quad \sigma_\ell\in\operatorname{Sep}(V)\right\}.
+\quad \sigma_\ell\in\mathrm{Sep}(V)\right\}.
 $$
 
 Each edge has a normalized pure state with Schmidt decomposition
@@ -55,7 +55,7 @@ The tensor factors of $`\rho_G`$ are regrouped by vertices when evaluating separ
 
 $$
 \boxed{
-\Gamma_{\operatorname{Sep}(V)}(\rho_G)
+\Gamma_{\mathrm{Sep}(V)}(\rho_G)
 =\prod_{e\in E}g_e
 =\prod_{e\in E}\left[2\left(\sum_i s_{e i}\right)^2-1\right].
 }
@@ -79,7 +79,7 @@ The identity acts on the full endpoint space, including directions outside the S
 **Lemma 2 — Leaf contraction.** Let $`R`$ be any Hermitian operator on one endpoint of an edge, and define
 
 $$
-M=\operatorname{Tr}_{v,e}[(R\otimes I)W_e].
+M=\mathrm{Tr}_{v,e}[(R\otimes I)W_e].
 $$
 
 Then $`M`$ is Hermitian and
@@ -99,7 +99,7 @@ Orthonormality gives $`\|\widetilde z\|\leq1`$. Direct contraction yields
 
 $$
 \langle z|M|z\rangle
-=\operatorname{Tr}\left[
+=\mathrm{Tr}\left[
 R\left(2|\widetilde z\rangle\langle\widetilde z|-I\right)
 \right].
 $$
@@ -115,7 +115,7 @@ The expression is real for every $`z`$, so $`M`$ is Hermitian, and taking the su
 If the Schmidt support fills both endpoint spaces and corresponding Schmidt bases are identified, the contraction has the particularly simple form
 
 $$
-M=2R^{\mathsf T}-\operatorname{Tr}(R)I.
+M=2R^{\mathsf T}-\mathrm{Tr}(R)I.
 $$
 
 For eigenvalues $`r_i`$ of $`R`$, the required estimate is then
@@ -131,7 +131,7 @@ The proof needs the bound for all Hermitian $`R`$, rather than only positive $`R
 **Lemma 3 — Absorbing a message.** If $`M`$ is Hermitian on $`\mathcal K`$ and $`S`$ is Hermitian on $`\mathcal K\otimes\mathcal L`$, then
 
 $$
-R'=\operatorname{Tr}_{\mathcal K}[(M\otimes I)S]
+R'=\mathrm{Tr}_{\mathcal K}[(M\otimes I)S]
 $$
 
 is Hermitian and satisfies
@@ -143,8 +143,8 @@ $$
 **Proof.** For any Hermitian $`H`$ on $`\mathcal L`$ with $`\|H\|_\infty\leq1`$,
 
 $$
-|\operatorname{Tr}(HR')|
-=|\operatorname{Tr}[(M\otimes H)S]|
+|\mathrm{Tr}(HR')|
+=|\mathrm{Tr}[(M\otimes H)S]|
 \leq\|M\otimes H\|_\infty\|S\|_1
 \leq\|M\|_\infty\|S\|_1.
 $$
@@ -162,7 +162,7 @@ $$
 **Lemma 4 — Product-vertex bound.** For any normalized vertex density operators,
 
 $$
-\left|\operatorname{Tr}\left[
+\left|\mathrm{Tr}\left[
 W_G\bigotimes_{v\in V}\rho_v
 \right]\right|\leq1.
 $$
@@ -171,10 +171,10 @@ $$
 
 The scalar tensor contraction is unchanged. Removing $`v`$ and $`e`$ leaves a smaller tree with the same invariant. Continue until one vertex remains. The final contraction is its trace, whose absolute value is at most its trace norm and hence at most one. A forest is a disjoint union of trees, and its contractions multiply. $`\square`$
 
-Convexity extends the bound to every $`\sigma\in\operatorname{Sep}(V)`$. The target expectation is
+Convexity extends the bound to every $`\sigma\in\mathrm{Sep}(V)`$. The target expectation is
 
 $$
-\operatorname{Tr}(W_G\rho_G)
+\mathrm{Tr}(W_G\rho_G)
 =\prod_e\langle\psi_e|W_e|\psi_e\rangle
 =\prod_e(2S_e^2-1),
 $$
@@ -183,7 +183,7 @@ because $`\langle\Omega_e|\psi_e\rangle=S_e`$. Therefore every signed separable 
 
 $$
 \prod_e g_e
-=\sum_\ell a_\ell\operatorname{Tr}(W_G\sigma_\ell)
+=\sum_\ell a_\ell\mathrm{Tr}(W_G\sigma_\ell)
 \leq\sum_\ell|a_\ell|.
 $$
 
@@ -236,16 +236,16 @@ Tensor these decompositions over edges. Each resulting term is a product of endp
 The proof also identifies the exact relation with standard robustness. If
 
 $$
-R_{\operatorname{Sep}(V)}(\rho)
+R_{\mathrm{Sep}(V)}(\rho)
 =\inf\left\{t\geq0:
 \rho=(1+t)\sigma_+-t\sigma_-,
-\quad \sigma_\pm\in\operatorname{Sep}(V)\right\},
+\quad \sigma_\pm\in\mathrm{Sep}(V)\right\},
 $$
 
-then collecting the positive and negative terms of any decomposition, and using $`\operatorname{Tr}\rho=1`$, gives
+then collecting the positive and negative terms of any decomposition, and using $`\mathrm{Tr}\rho=1`$, gives
 
 $$
-\Gamma_{\operatorname{Sep}(V)}(\rho)=1+2R_{\operatorname{Sep}(V)}(\rho).
+\Gamma_{\mathrm{Sep}(V)}(\rho)=1+2R_{\mathrm{Sep}(V)}(\rho).
 $$
 
 Both the positive and the negative normalized states must be separable. Replacing the negative state by an arbitrary density operator defines a different robustness and is not the norm evaluated here.
@@ -257,7 +257,7 @@ The leaf argument cannot be extended to arbitrary graphs. Consider a four-cycle 
 A computational-basis contraction gives
 
 $$
-\operatorname{Tr}\left[\sigma\prod_{e\in S}\Phi_e\right]
+\mathrm{Tr}\left[\sigma\prod_{e\in S}\Phi_e\right]
 =4^{-|S|}
 \quad\text{for every proper subset }S\subsetneq E,
 $$
@@ -265,7 +265,7 @@ $$
 whereas projecting all four edges closes the loop and gives $`4^{-3}`$. Expanding the four witness factors therefore yields
 
 $$
-\operatorname{Tr}(W_G\sigma)
+\mathrm{Tr}(W_G\sigma)
 =\sum_{k=0}^{3}\binom4k(-1)^{4-k}+4^4\,4^{-3}
 =-1+4=3.
 $$
