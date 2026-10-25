@@ -1,0 +1,31 @@
+# Quantum Memory Circuit Cutting
+
+> Exact signed circuit-cutting extents under prescribed local memory breaks and a specified two-slot dephasing model. The repository contains the complete topic-based scientific account, source attribution, and finite verification code.
+
+## Start here
+
+- [Overview](README.md): Results, scope, reproduction commands and repository purpose.
+- [Scientific reading map](science/README.md): Dependencies and suggested routes through the proofs.
+- [Operational model](science/model.md): Authoritative definitions of causal slots, charged storage, bounded-score instruments and extent.
+
+## Scientific account
+
+- [Forest witness](science/forest-witness.md): Pure-edge forest theorem, finite decomposition and cycle counterexample.
+- [Reset schedules](science/reset-schedules.md): Common-refinement law and causal epoch factorization.
+- [Wire construction](science/wire-construction.md): Online one-persistent-qubit implementation and resource counts.
+- [Gate cuts](science/gate-cuts.md): KAK gate law, inherited upper construction, signed teleportation and charged storage.
+- [Dephasing memory](science/dephasing-memory.md): Exact two-slot theorem, complete converse, correlated-noise and timing counterexamples, and imposed-reset block corollary.
+- [Precision and calibration](science/precision-calibration.md): Approximate-extent lower bounds, exact mismatch error, repeated-block bias, calibration and execution costs.
+- [Resource interpretation](science/resource-interpretation.md): Scheduling examples, resources and limits of the sampling interpretation.
+
+## Evidence and attribution
+
+- [Related work](references/related-work.md): Established upper constructions, closest models and contribution boundaries.
+- [Bibliography](references/references.bib): Primary-source publication details.
+- [Verification guide](verification/README.md): Reproduction and interpretation of finite checks.
+- [Verification implementation](verification/verify.py): Fixed-seed numerical checks.
+- [Recorded results](verification/results.json): Machine-readable output of the checks.
+
+## Reading conventions
+
+Use normalized Choi operators and the exact resource class of each theorem. The signed atoms need not themselves be completely positive or trace preserving, but their underlying instruments are physical and complete. All private storage across a gap is charged. Exact extent is not a universal shot-complexity lower bound. The known collective upper constructions retain their attribution; the memory-constrained claims are proved in the scientific pages. The learning route, when present, supplements these authoritative scientific pages.
