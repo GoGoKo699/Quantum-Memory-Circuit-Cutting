@@ -11,7 +11,7 @@ Use the strict port and scored-instrument conventions of the [causal model](mode
 \tag{D1}
 ```
 
-between the slots. Write $\eta_A,\eta_B$ for the two coherence factors and $r=\eta_A\eta_B$. The optimum signed bounded-score extent is
+between the slots. Write $`\eta_A,\eta_B`$ for the two coherence factors and $`r=\eta_A\eta_B`$. The optimum signed bounded-score extent is
 
 ```math
 \boxed{\Gamma_2(\eta_A,\eta_B)
@@ -24,7 +24,7 @@ The result includes arbitrary local instruments, classical communication in eith
 | Stage | Available quantum systems and required action |
 |---|---|
 | First slot | Alice receives the first input. The apparatus must deliver Bob's first output before the memory gap. |
-| Gap | At most one cutter-accessible qubit remains at each side. Their prescribed noise use is $\mathcal D_{\eta_A}\otimes\mathcal D_{\eta_B}$. |
+| Gap | At most one cutter-accessible qubit remains at each side. Their prescribed noise use is $`\mathcal D_{\eta_A}\otimes\mathcal D_{\eta_B}`$. |
 | Second slot | Only after the gap does Alice receive the second input. Bob then delivers the second output. |
 
 All accessible quantum degrees of freedom count toward the memory bound, including retained data qubits, resource ports, environments and purportedly temporary ancillas. Transient ancillas inside a slot are unrestricted, but none may bypass the gap. A released output cannot be borrowed back by the apparatus. An external tester may retain that output and use it to prepare a later input; that is a permitted causal use of the exposed ports.
@@ -41,7 +41,7 @@ For clarity, a free scored atom has the form
 \tag{D3}
 ```
 
-where $\{\mathcal E_h\}_h$ is a complete physical causal instrument obeying the resource restrictions. A signed decomposition of the ideal two-slot comb $\mathcal I^{(2)}$ is
+where $`\{\mathcal E_h\}_h`$ is a complete physical causal instrument obeying the resource restrictions. A signed decomposition of the ideal two-slot comb $`\mathcal I^{(2)}`$ is
 
 ```math
 \mathcal I^{(2)}=\sum_k c_k\mathcal F_k,
@@ -67,7 +67,7 @@ Use normalized Choi states. Set
 \tag{D5}
 ```
 
-In the computational basis $(00,01,10,11)$,
+In the computational basis $`(00,01,10,11)`$,
 
 ```math
 \Phi=\frac12
@@ -107,9 +107,9 @@ Their separability and preparation are explicit. Apply the bilateral isotropic t
 \tag{D9}
 ```
 
-to $|00\rangle\langle00|$ for $\rho_+$, or to $|01\rangle\langle01|$ for $\rho_-$. It requires a shared classical choice of $U$, not shared quantum entanglement. The uniform single-qubit Clifford ensemble is a finite exact unitary 2-design and implements this twirl; see [Dankert et al.](https://arxiv.org/abs/quant-ph/0606161).
+to $`|00\rangle\langle00|`$ for $`\rho_+`$, or to $`|01\rangle\langle01|`$ for $`\rho_-`$. It requires a shared classical choice of $`U`$, not shared quantum entanglement. The uniform single-qubit Clifford ensemble is a finite exact unitary 2-design and implements this twirl; see [Dankert et al.](https://arxiv.org/abs/quant-ph/0606161).
 
-On the two spatial slot pairs, ordered as $(A_1B_1)(A_2B_2)$, take
+On the two spatial slot pairs, ordered as $`(A_1B_1)(A_2B_2)`$, take
 
 ```math
 V_{++}=\rho_+\otimes\rho_+,
@@ -132,7 +132,7 @@ At a single laboratory, prepare a Bell pair between its first resource port and 
 \tag{D11}
 ```
 
-Let $E_r$ be the product $(\chi_{\eta_A})_{A_1A_2}\otimes (\chi_{\eta_B})_{B_1B_2}$, reordered into slot pairs, followed by an independent twirl (D9) on each pair. Although each local state can be entangled between its two times, the joint resource is separable between Alice and Bob. The twirls preserve that spatial separability.
+Let $`E_r`$ be the product $`(\chi_{\eta_A})_{A_1A_2}\otimes (\chi_{\eta_B})_{B_1B_2}`$, reordered into slot pairs, followed by an independent twirl (D9) on each pair. Although each local state can be entangled between its two times, the joint resource is separable between Alice and Bob. The twirls preserve that spatial separability.
 
 The full normalized density matrix has either of the equivalent forms
 
@@ -146,7 +146,7 @@ E_r={}&\frac{1+r}{8}\Phi\otimes\Phi
 \tag{D12}
 ```
 
-For an explicit $16\times16$ block matrix, put $k=1+2r$. Each displayed entry below is a $4\times4$ block, with $W$ specified in (D6):
+For an explicit $`16\times16`$ block matrix, put $`k=1+2r`$. Each displayed entry below is a $`4\times4`$ block, with $`W`$ specified in (D6):
 
 ```math
 E_r=\frac1{144}
@@ -159,7 +159,7 @@ E_r=\frac1{144}
 \tag{D13}
 ```
 
-To derive (D12), first note that every local one-qubit marginal of $\chi_\eta$ is maximally mixed. Consequently each spatial Bell fidelity is $1/4$. The joint Bell fidelity is
+To derive (D12), first note that every local one-qubit marginal of $`\chi_\eta`$ is maximally mixed. Consequently each spatial Bell fidelity is $`1/4`$. The joint Bell fidelity is
 
 ```math
 \operatorname{Tr}[(\Phi_{A_1B_1}\otimes\Phi_{A_2B_2})
@@ -169,7 +169,7 @@ To derive (D12), first note that every local one-qubit marginal of $\chi_\eta$ i
 \tag{D14}
 ```
 
-The pairwise twirl makes the state uniform on each of the four orthogonal sectors $\Phi\Phi,\Phi(I-\Phi),(I-\Phi)\Phi,(I-\Phi)(I-\Phi)$. Their probabilities are therefore $(1+r)/8,(1-r)/8,(1-r)/8,(5+r)/8$, which proves the stated full matrix expression.
+The pairwise twirl makes the state uniform on each of the four orthogonal sectors $`\Phi\Phi,\Phi(I-\Phi),(I-\Phi)\Phi,(I-\Phi)(I-\Phi)`$. Their probabilities are therefore $`(1+r)/8,(1-r)/8,(1-r)/8,(5+r)/8`$, which proves the stated full matrix expression.
 
 ### 2.3 Exact decomposition
 
@@ -192,10 +192,10 @@ This is a density-matrix identity, not only an agreement of selected expectation
 
 | Sector state | Coefficient in the right side of (D16) |
 |---|---:|
-| $\Phi\otimes\Phi$ | $3/4+b_r(1+r)/8=1$ |
-| $\Phi\otimes R$ | $3/4-a_r/2+b_r(1-r)/8=0$ |
-| $R\otimes\Phi$ | $3/4-a_r/2+b_r(1-r)/8=0$ |
-| $R\otimes R$ | $3/4-a_r+b_r(5+r)/8=0$ |
+| $`\Phi\otimes\Phi`$ | $`3/4+b_r(1+r)/8=1`$ |
+| $`\Phi\otimes R`$ | $`3/4-a_r/2+b_r(1-r)/8=0`$ |
+| $`R\otimes\Phi`$ | $`3/4-a_r/2+b_r(1-r)/8=0`$ |
+| $`R\otimes R`$ | $`3/4-a_r+b_r(5+r)/8=0`$ |
 
 The signed coefficients sum to one, and their absolute sum is
 
@@ -210,7 +210,7 @@ The four resources in (D16) are coarse-grained physical preparations. The finite
 
 For each slot, use its resource qubits for standard teleportation: Alice Bell-measures the received input with her resource port, sends the two classical outcome bits, and Bob applies the appropriate Pauli correction before releasing the output. The relation between an arbitrary teleportation resource and the resulting Pauli channel is established in [Bowen and Bose](https://arxiv.org/abs/quant-ph/0107132); the correlated multi-use version is explicit in [Caruso, Giovannetti and Palma](https://arxiv.org/abs/0906.0506).
 
-Here it can also be checked directly. Let $\Phi_\alpha=(I\otimes P_\alpha)\Phi(I\otimes P_\alpha)^\dagger$, for $P_\alpha\in\{I,X,Y,Z\}$. A resource diagonal as
+Here it can also be checked directly. Let $`\Phi_\alpha=(I\otimes P_\alpha)\Phi(I\otimes P_\alpha)^\dagger`$, for $`P_\alpha\in\{I,X,Y,Z\}`$. A resource diagonal as
 
 ```math
 \Omega=\sum_{\alpha,\beta}p_{\alpha\beta}
@@ -218,9 +218,9 @@ Here it can also be checked directly. Let $\Phi_\alpha=(I\otimes P_\alpha)\Phi(I
 \tag{D18}
 ```
 
-implements a causal two-slot comb: sample $(\alpha,\beta)$ from this distribution, apply $P_\alpha$ to the first transmitted input, and apply $P_\beta$ to the second. Its normalized comb Choi state is exactly $\Omega$. An external tester may adapt its second input to the first output; each fixed Pauli path remains a well-defined causal operation, so linearity proves the same identity for that tester. Averaging (D18) does not assume independent or product input states.
+implements a causal two-slot comb: sample $`(\alpha,\beta)`$ from this distribution, apply $`P_\alpha`$ to the first transmitted input, and apply $`P_\beta`$ to the second. Its normalized comb Choi state is exactly $`\Omega`$. An external tester may adapt its second input to the first output; each fixed Pauli path remains a well-defined causal operation, so linearity proves the same identity for that tester. Averaging (D18) does not assume independent or product input states.
 
-All four states in (D16) are diagonal in the product Bell basis. Applying slotwise teleportation to (D16) therefore gives (D4) for the full comb. The target resource $\Phi\otimes\Phi$ gives two identity slots.
+All four states in (D16) are diagonal in the product Bell basis. Applying slotwise teleportation to (D16) therefore gives (D4) for the full comb. The target resource $`\Phi\otimes\Phi`$ gives two identity slots.
 
 The memory resource does not need to exist as four simultaneously stored qubits. In its streaming implementation:
 
@@ -237,7 +237,7 @@ There is one stored qubit per side across the gap. The peak transient width is l
 
 The lower bound will use a necessary constraint on the local two-time states generated by the noisy memory. It does not assert that this constraint completely characterizes all physically realizable states.
 
-For a normalized pure two-qubit state with coefficient matrix $\Psi$, define
+For a normalized pure two-qubit state with coefficient matrix $`\Psi`$, define
 
 ```math
 C(|\psi\rangle)=2|\det\Psi|.
@@ -262,7 +262,7 @@ C(\chi_\eta)=\eta,\qquad C_a(\chi_\eta)=1.
 \tag{D21}
 ```
 
-**Proof.** Every pure vector in any decomposition of $\chi_\eta$ lies in $\operatorname{span}\{|00\rangle,|11\rangle\}$, since the density matrix has no support outside it. For a vector $\alpha|00\rangle+\beta|11\rangle$, the concurrence is $2|\alpha\beta|$. The triangle inequality applied to the $00,11$ matrix element gives an average concurrence at least $\eta$. Choose $\theta\in[0,\pi/4]$ with $\sin2\theta=\eta$. The equal mixture of
+**Proof.** Every pure vector in any decomposition of $`\chi_\eta`$ lies in $`\operatorname{span}\{|00\rangle,|11\rangle\}`$, since the density matrix has no support outside it. For a vector $`\alpha|00\rangle+\beta|11\rangle`$, the concurrence is $`2|\alpha\beta|`$. The triangle inequality applied to the $`00,11`$ matrix element gives an average concurrence at least $`\eta`$. Choose $`\theta\in[0,\pi/4]`$ with $`\sin2\theta=\eta`$. The equal mixture of
 
 ```math
 \cos\theta|00\rangle+\sin\theta|11\rangle,
@@ -270,11 +270,11 @@ C(\chi_\eta)=\eta,\qquad C_a(\chi_\eta)=1.
 \sin\theta|00\rangle+\cos\theta|11\rangle
 ```
 
-is $\chi_\eta$, and both vectors have concurrence $\eta$, attaining the lower bound. Conversely, $\chi_\eta$ is the mixture of $\Phi^+$ and $\Phi^-$ with weights $(1+\eta)/2$ and $(1-\eta)/2$. Both are maximally entangled, so the assisted roof equals its maximum possible value one. $\square$
+is $`\chi_\eta`$, and both vectors have concurrence $`\eta`$, attaining the lower bound. Conversely, $`\chi_\eta`$ is the mixture of $`\Phi^+`$ and $`\Phi^-`$ with weights $`(1+\eta)/2`$ and $`(1-\eta)/2`$. Both are maximally entangled, so the assisted roof equals its maximum possible value one. $`\square`$
 
 ### Lemma 2: both roofs scale identically under local filtering
 
-For invertible $2\times2$ matrices $A,B$, let
+For invertible $`2\times2`$ matrices $`A,B`$, let
 
 ```math
 \rho'=\frac{(A\otimes B)\rho(A\otimes B)^\dagger}{p},
@@ -290,7 +290,7 @@ C_a(\rho')=\frac{|\det A\det B|}{p}C_a(\rho).
 \tag{D22}
 ```
 
-**Proof.** For a pure coefficient matrix, filtering changes $\Psi$ to $A\Psi B^T$. Its determinant acquires the factor $\det A\det B$. Mapping a pure ensemble through the filter changes the probability of each component by its success probability; in the average concurrence this cancels that component's normalization. The entire average is multiplied by $|\det A\det B|/p$. Invertibility gives a bijection between the input and output ensembles, so both the infimum and supremum scale by the same factor. If either matrix is rank one, its output has one local system in a fixed one-dimensional support, and both roofs vanish. Zero-probability branches may be omitted. This also agrees with the established concurrence filtering law in [Verstraete, Dehaene and De Moor, Theorem 1](https://arxiv.org/abs/quant-ph/0011111). $\square$
+**Proof.** For a pure coefficient matrix, filtering changes $`\Psi`$ to $`A\Psi B^T`$. Its determinant acquires the factor $`\det A\det B`$. Mapping a pure ensemble through the filter changes the probability of each component by its success probability; in the average concurrence this cancels that component's normalization. The entire average is multiplied by $`|\det A\det B|/p`$. Invertibility gives a bijection between the input and output ensembles, so both the infimum and supremum scale by the same factor. If either matrix is rank one, its output has one local system in a fixed one-dimensional support, and both roofs vanish. Zero-probability branches may be omitted. This also agrees with the established concurrence filtering law in [Verstraete, Dehaene and De Moor, Theorem 1](https://arxiv.org/abs/quant-ph/0011111). $`\square`$
 
 ### Lemma 3: every local two-time branch belongs to a concurrence cone
 
@@ -303,9 +303,9 @@ Define the convex set
 \tag{D23}
 ```
 
-Every normalized local two-time Choi factor generated through the prescribed memory use belongs to $\mathcal K_\eta$.
+Every normalized local two-time Choi factor generated through the prescribed memory use belongs to $`\mathcal K_\eta`$.
 
-**Proof.** Any pure state on a first emitted qubit and the incoming memory is $(A\otimes I)|\Phi\rangle$ for a $2\times2$ matrix $A$, with its normalization absorbed in $A$. A post-gap, single-Kraus operation from the memory to the second emitted qubit is another $2\times2$ matrix $B$. The resulting unnormalized state is
+**Proof.** Any pure state on a first emitted qubit and the incoming memory is $`(A\otimes I)|\Phi\rangle`$ for a $`2\times2`$ matrix $`A`$, with its normalization absorbed in $`A`$. A post-gap, single-Kraus operation from the memory to the second emitted qubit is another $`2\times2`$ matrix $`B`$. The resulting unnormalized state is
 
 ```math
 (A\otimes B)\chi_\eta(A\otimes B)^\dagger.
@@ -314,18 +314,18 @@ Every normalized local two-time Choi factor generated through the prescribed mem
 
 Lemmas 1 and 2 prove its normalized version satisfies (D23).
 
-This preparation description applies directly to Bob's two outputs. For Alice, use independent normalized Bell probes $\Phi_{R_1I_1}$ and $\Phi_{R_2I_2}$, delivering $I_j$ only in slot $j$ and keeping $R_j$ inaccessible to the apparatus. The first operation prepares a state on $R_1M_A$. A refined terminal operation in slot two is a bra $\langle v|_{M_AI_2}$, after expanding any discarded final output in a basis. Contracting it with the second Bell probe induces
+This preparation description applies directly to Bob's two outputs. For Alice, use independent normalized Bell probes $`\Phi_{R_1I_1}`$ and $`\Phi_{R_2I_2}`$, delivering $`I_j`$ only in slot $`j`$ and keeping $`R_j`$ inaccessible to the apparatus. The first operation prepares a state on $`R_1M_A`$. A refined terminal operation in slot two is a bra $`\langle v|_{M_AI_2}`$, after expanding any discarded final output in a basis. Contracting it with the second Bell probe induces
 
 ```math
 B_{i m}=\frac{v_{m i}^*}{\sqrt2}
 \tag{D25}
 ```
 
-from $M_A$ to $R_2$. Thus Alice's local reference state has the same form (D24).
+from $`M_A`$ to $`R_2`$. Thus Alice's local reference state has the same form (D24).
 
-Mixed initial states, unobserved local Kraus outcomes and discarded transient systems give positive mixtures of these filtered states. The roof definition makes $C$ convex and $C_a$ concave. Consequently a mixture of states satisfying $C\leq\eta C_a$ also satisfies that inequality. These refinements are of local operation environments only. Refining the inaccessible dephasing environment into its $I$ and $Z$ error labels would violate the model and would invalidate (D23). $\square$
+Mixed initial states, unobserved local Kraus outcomes and discarded transient systems give positive mixtures of these filtered states. The roof definition makes $`C`$ convex and $`C_a`$ concave. Consequently a mixture of states satisfying $`C\leq\eta C_a`$ also satisfies that inequality. These refinements are of local operation environments only. Refining the inaccessible dephasing environment into its $`I`$ and $`Z`$ error labels would violate the model and would invalidate (D23). $`\square`$
 
-The late release of $I_2$ and early release of $B_1$ are exactly what force the local two-time correlations through the memory use. Abstract causality of an input-output map, without these availability constraints, does not supply Lemma 3.
+The late release of $`I_2`$ and early release of $`B_1`$ are exactly what force the local two-time correlations through the memory use. Abstract causality of an input-output map, without these availability constraints, does not supply Lemma 3.
 
 ## 5. A witness bounded on every scored protocol
 
@@ -341,7 +341,7 @@ Write a two-qubit state as
 \tag{D26}
 ```
 
-For any normalized two-qubit states $\sigma,\tau$,
+For any normalized two-qubit states $`\sigma,\tau`$,
 
 ```math
 T_\sigma:T_\tau\leq1+2C(\sigma)C(\tau),
@@ -354,11 +354,11 @@ T_\sigma:T_\tau\leq1+2C(\sigma)C(\tau),
 \tag{D28}
 ```
 
-**Proof.** A pure state's correlation matrix has singular values $(1,C,C)$, as follows by writing its Schmidt form. The matrix trace inequality therefore bounds the correlation-matrix inner product of two pure states by $1+2C_\sigma C_\tau$. Expand the two mixed states into independent ensembles attaining, or approaching, their convex roofs. Bilinearity gives (D27). No equal-concurrence ensemble assumption is needed.
+**Proof.** A pure state's correlation matrix has singular values $`(1,C,C)`$, as follows by writing its Schmidt form. The matrix trace inequality therefore bounds the correlation-matrix inner product of two pure states by $`1+2C_\sigma C_\tau`$. Expand the two mixed states into independent ensembles attaining, or approaching, their convex roofs. Bilinearity gives (D27). No equal-concurrence ensemble assumption is needed.
 
-For each pure state in an ensemble, $C(\psi_j)^2+|a_j|^2=1$. The vectors $(C(\psi_j),a_j)$ have unit Euclidean norm, so their convex average has norm at most one. It follows that $(\sum_jp_jC(\psi_j))^2+|a_\sigma|^2\leq1$. Maximizing the average concurrence gives (D28), and the second marginal is identical. $\square$
+For each pure state in an ensemble, $`C(\psi_j)^2+|a_j|^2=1`$. The vectors $`(C(\psi_j),a_j)`$ have unit Euclidean norm, so their convex average has norm at most one. It follows that $`(\sum_jp_jC(\psi_j))^2+|a_\sigma|^2\leq1`$. Maximizing the average concurrence gives (D28), and the second marginal is identical. $`\square`$
 
-For $\sigma\in\mathcal K_{\eta_A}$, $\tau\in\mathcal K_{\eta_B}$, let $x=C_a(\sigma)$, $y=C_a(\tau)$. Equations (D27) and (D28) imply
+For $`\sigma\in\mathcal K_{\eta_A}`$, $`\tau\in\mathcal K_{\eta_B}`$, let $`x=C_a(\sigma)`$, $`y=C_a(\tau)`$. Equations (D27) and (D28) imply
 
 ```math
 \begin{aligned}
@@ -370,9 +370,9 @@ F_r(\sigma,\tau)
 \tag{D29}
 ```
 
-The last inequality is Cauchy-Schwarz for the unit vectors $(x,\sqrt{1-x^2})$ and $(y,\sqrt{1-y^2})$.
+The last inequality is Cauchy-Schwarz for the unit vectors $`(x,\sqrt{1-x^2})`$ and $`(y,\sqrt{1-y^2})`$.
 
-The lower bound needs no cone restriction. With the spin-flipped state $\widetilde\tau=(Y\otimes Y)\tau^*(Y\otimes Y)$, direct expansion gives
+The lower bound needs no cone restriction. With the spin-flipped state $`\widetilde\tau=(Y\otimes Y)\tau^*(Y\otimes Y)`$, direct expansion gives
 
 ```math
 F_r(\sigma,\tau)
@@ -382,7 +382,7 @@ F_r(\sigma,\tau)
 \tag{D30}
 ```
 
-Both traces are nonnegative, and $0\leq r\leq1$.
+Both traces are nonnegative, and $`0\leq r\leq1`$.
 
 ### The dual witness
 
@@ -393,14 +393,14 @@ Q_r=\frac{W_1W_2+r(W_1+W_2-I)}{1+r}.
 \tag{D31}
 ```
 
-For a spatial product state $\sigma_{R_1R_2}\otimes\tau_{B_1B_2}$, use
+For a spatial product state $`\sigma_{R_1R_2}\otimes\tau_{B_1B_2}`$, use
 
 ```math
 W=\sum_{i=x,y,z}\sigma_i\otimes\sigma_i^T.
 ```
 
-The expectations of $W_1,W_2,W_1W_2$ are respectively
-$a_\sigma\cdot a_{\tau^T}$, $b_\sigma\cdot b_{\tau^T}$, and $T_\sigma:T_{\tau^T}$. Full transposition preserves both concurrence roofs. Therefore (D29) and (D30) give
+The expectations of $`W_1,W_2,W_1W_2`$ are respectively
+$`a_\sigma\cdot a_{\tau^T}`$, $`b_\sigma\cdot b_{\tau^T}`$, and $`T_\sigma:T_{\tau^T}`$. Full transposition preserves both concurrence roofs. Therefore (D29) and (D30) give
 
 ```math
 \left|\operatorname{Tr}[Q_r(\sigma\otimes\tau)]\right|
@@ -440,7 +440,7 @@ For a scored atom (D3), equations (D32)–(D34) yield
 
 This proves the bound even for arbitrary adaptive classical communication and bounded postselection scores. The score cannot depend on an external tester's private measurement result: that would change the universal comb interface.
 
-The ideal comb has normalized Choi state $J_0=\Phi\otimes\Phi$. Thus
+The ideal comb has normalized Choi state $`J_0=\Phi\otimes\Phi`$. Thus
 
 ```math
 \operatorname{Tr}(Q_rJ_0)=\frac{9+5r}{1+r}.
@@ -451,7 +451,7 @@ Apply (D35) to every atom in (D4) and use the triangle inequality. It proves the
 
 ## 6. Endpoints, repeated blocks and scope tests
 
-At $r=0$, $Q_0=W_1W_2$ and $\Gamma_2=9$. Complete dephasing at either laboratory removes the useful local temporal entanglement, regardless of the other laboratory's noiseless qubit. At $r=1$,
+At $`r=0`$, $`Q_0=W_1W_2`$ and $`\Gamma_2=9`$. Complete dephasing at either laboratory removes the useful local temporal entanglement, regardless of the other laboratory's noiseless qubit. At $`r=1`$,
 
 ```math
 Q_1=8\Phi\otimes\Phi-I,
@@ -460,18 +460,18 @@ Q_1=8\Phi\otimes\Phi-I,
 
 which is the ordinary dimension-four spatial separability witness. The unrestricted noiseless extent and teleportation-based wire-cutting background are treated in [Brenner, Piveteau and Sutter](https://arxiv.org/abs/2302.03366), while constant local control ancillas also occur in [Harrow and Lowe](https://arxiv.org/abs/2403.01018).
 
-For $m$ independent two-slot blocks, resetting both memories after each block and applying (D16) independently gives extent
+For $`m`$ independent two-slot blocks, resetting both memories after each block and applying (D16) independently gives extent
 
 ```math
 \left(5+\frac4{1+r}\right)^m<9^m\qquad(r>0).
 \tag{D37}
 ```
 
-This is an upper bound for the unrestricted $2m$-slot problem. It is not an assertion that unrestricted many-slot optima multiply. Calibration and statistical error accounting for this particular repeated-block construction are given in [Precision and calibration](precision-calibration.md).
+This is an upper bound for the unrestricted $`2m`$-slot problem. It is not an assertion that unrestricted many-slot optima multiply. Calibration and statistical error accounting for this particular repeated-block construction are given in [Precision and calibration](precision-calibration.md).
 
 ### Exact product law when both resets are imposed
 
-There is a stronger conclusion for a different, explicitly restricted model. Suppose both laboratories are required to undergo complete entanglement-breaking resets between prescribed two-slot blocks. Within block $b$, each side has its one prescribed memory qubit and dephasing parameter $\eta_{s,b}$, as above. Require fresh noise instances across blocks, as well as the conditional product noise between the two laboratories inside each block. Then
+There is a stronger conclusion for a different, explicitly restricted model. Suppose both laboratories are required to undergo complete entanglement-breaking resets between prescribed two-slot blocks. Within block $`b`$, each side has its one prescribed memory qubit and dephasing parameter $`\eta_{s,b}`$, as above. Require fresh noise instances across blocks, as well as the conditional product noise between the two laboratories inside each block. Then
 
 ```math
 \boxed{\Gamma_{\mathrm{reset\ blocks}}
@@ -479,7 +479,7 @@ There is a stronger conclusion for a different, explicitly restricted model. Sup
 \tag{D37a}
 ```
 
-For the converse, refine the measurement and preparation outcomes in each entanglement-breaking reset, granting their classical records if necessary. This enlarges the allowed operations and is legitimate for a lower bound. After conditioning on a full history, the normalized Bell-test Choi contribution factors over local block vertices. No system coherence crosses a reset, and freshness leaves the dephasing channels in the separate block factors. Within every block, the two local factors satisfy Lemma 3. The tensor product of that block's witness $Q_{r_b}$ therefore has absolute expectation at most one on a normalized full-history product. Summing the positive history probabilities and bounded scores gives the same bound for every physical atom. Its target expectation is the product in (D37a). Independent block constructions attain it.
+For the converse, refine the measurement and preparation outcomes in each entanglement-breaking reset, granting their classical records if necessary. This enlarges the allowed operations and is legitimate for a lower bound. After conditioning on a full history, the normalized Bell-test Choi contribution factors over local block vertices. No system coherence crosses a reset, and freshness leaves the dephasing channels in the separate block factors. Within every block, the two local factors satisfy Lemma 3. The tensor product of that block's witness $`Q_{r_b}`$ therefore has absolute expectation at most one on a normalized full-history product. Summing the positive history probabilities and bounded scores gives the same bound for every physical atom. Its target expectation is the product in (D37a). Independent block constructions attain it.
 
 The dephasing environments remain unrefined in this argument. System resets alone do not imply fresh environmental noise; hidden phase errors reused across blocks would not satisfy the stated noise model. The exact product law (D37a) must therefore be distinguished from the upper bound (D37) for memories that may remain coherent across arbitrarily many slots.
 
@@ -501,20 +501,20 @@ Each marginal channel is complete dephasing. Starting from a local temporal Bell
 \tag{D39}
 ```
 
-The phase errors agree. After the bilateral slot twirls, this is exactly $E_1$, not $E_0$: its local correlation-tensor overlap is three. Consequently (D16) with $r=1$ achieves extent seven even though both marginal coherence factors are zero. The spatial witness $Q_1$ bounds every spatially separable scored branch by one, proving seven is optimal in this example.
+The phase errors agree. After the bilateral slot twirls, this is exactly $`E_1`$, not $`E_0`$: its local correlation-tensor overlap is three. Consequently (D16) with $`r=1`$ achieves extent seven even though both marginal coherence factors are zero. The spatial witness $`Q_1`$ bounds every spatially separable scored branch by one, proving seven is optimal in this example.
 
 Thus independent complete dephasing gives nine, while the correlated noise (D38) gives seven with the same marginal channels. Individual-memory calibration does not establish the product-noise assumption. Access to phase-error flags would also change the answer, since it would permit correction of the memory errors.
 
 ### Early second input: abstract causal channels do not enforce memory use
 
-Keep $\eta_A=0$, $\eta_B=1$, but give Alice both source inputs before the gap. She can perform both of her resource-side teleportation measurements before the gap and retain only their classical outcomes. Bob uses his noiseless qubit to hold the second resource output. This implements the four resources in (D16) with $r=1$, so the extent is seven rather than the nine predicted for the strict interface.
+Keep $`\eta_A=0`$, $`\eta_B=1`$, but give Alice both source inputs before the gap. She can perform both of her resource-side teleportation measurements before the gap and retain only their classical outcomes. Bob uses his noiseless qubit to hold the second resource output. This implements the four resources in (D16) with $`r=1`$, so the extent is seven rather than the nine predicted for the strict interface.
 
-More explicitly, for the $E_1$ atom Alice prepares a local Bell pair on her two resource ports, twirls them, and Bell-measures each against its already available input. She has no quantum system left to protect during the gap. Bob prepares his local Bell pair, releases and corrects its first port, and stores its second port until the second output time. The product resources are simpler versions of the same schedule. Their averaged maps remain correlated Pauli combs, so the counterexample need not introduce signaling from a later input to an earlier output at the abstract map level. It violates the physical input-availability condition instead.
+More explicitly, for the $`E_1`$ atom Alice prepares a local Bell pair on her two resource ports, twirls them, and Bell-measures each against its already available input. She has no quantum system left to protect during the gap. Bob prepares his local Bell pair, releases and corrects its first port, and stores its second port until the second output time. The product resources are simpler versions of the same schedule. Their averaged maps remain correlated Pauli combs, so the counterexample need not introduce signaling from a later input to an earlier output at the abstract map level. It violates the physical input-availability condition instead.
 
 The spatial lower bound seven again proves optimality in this relaxed example. Similarly, allowing Bob to retain the first output until after the gap removes the reason his two-time resource must pass through his prescribed memory. Both port-release conditions are substantive assumptions.
 
 ## 7. Precision of the claim
 
-Equation (D2) is exact for universal, unbiased, signed bounded-score simulation in the stated resource class. It is not a lower bound on the number of shots needed by every possible estimator, and $\Gamma_2^2$ is only the usual bounded-range sampling upper-bound factor. Learning an observable-specific cut, exploiting a promised circuit family or accepting controlled bias changes the estimation problem. [Harrow and Lowe, Section 2.2](https://arxiv.org/abs/2403.01018) distinguish extent from actual variance, and [Harada et al.](https://arxiv.org/abs/2512.19623) give tomography-based examples with polynomial measurement scaling for promised tree structures.
+Equation (D2) is exact for universal, unbiased, signed bounded-score simulation in the stated resource class. It is not a lower bound on the number of shots needed by every possible estimator, and $`\Gamma_2^2`$ is only the usual bounded-range sampling upper-bound factor. Learning an observable-specific cut, exploiting a promised circuit family or accepting controlled bias changes the estimation problem. [Harrow and Lowe, Section 2.2](https://arxiv.org/abs/2403.01018) distinguish extent from actual variance, and [Harada et al.](https://arxiv.org/abs/2512.19623) give tomography-based examples with polynomial measurement scaling for promised tree structures.
 
 No characterization of arbitrary memory channels, correlated environments or the unrestricted optimum for all numbers of noisy slots is implied. The concurrence-cone argument and the four-resource construction establish precisely the two-slot theorem above.
