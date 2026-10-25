@@ -8,6 +8,21 @@
 - [Scientific reading map](science/README.md): Dependencies and suggested routes through the proofs.
 - [Operational model](science/model.md): Authoritative definitions of causal slots, charged storage, bounded-score instruments and extent.
 
+## Routes by reader intention
+
+- Scientific story: README.md, then science/model.md and science/resource-interpretation.md. Identify the exact causal resource class before interpreting the extent.
+- Self-directed study: learning/README.md, learning/tutorial.md, learning/milestones.md and learning/anchor.md. Watrous (2018) is the sole educational anchor; the map has 12 background and 18 narrative milestones.
+- Reset theorem inspection: science/forest-witness.md, science/reset-schedules.md, then science/wire-construction.md or science/gate-cuts.md. Separate the converse from the achievable construction and its attribution.
+- Noisy theorem inspection: science/dephasing-memory.md, then science/precision-calibration.md. Preserve independent unflagged noise, strict ports, and the imposed-reset/fresh-noise conditions of the block product law.
+- Reproduction: verification/README.md, verification/verify.py and verification/results.json. Finite checks support the algebra and causal implementations; they are not universal optimality proofs.
+
+## Learning route
+
+- [Learning entrypoint](learning/README.md): How the shared route, map and source bridge fit together.
+- [Worked explanation](learning/tutorial.md): One-cut witness, two-cut memory comparison, scheduling, gates, dephasing and precision.
+- [Thirty milestones](learning/milestones.md): Stable M01–M30 understanding targets, dependencies, conceptual connections and canonical references.
+- [Watrous source bridge](learning/anchor.md): Verified source locators, normalized Choi translation, and the research steps supplied beyond the textbook.
+
 ## Scientific account
 
 - [Forest witness](science/forest-witness.md): Pure-edge forest theorem, finite decomposition and cycle counterexample.
@@ -28,4 +43,4 @@
 
 ## Reading conventions
 
-Use normalized Choi operators and the exact resource class of each theorem. The signed atoms need not themselves be completely positive or trace preserving, but their underlying instruments are physical and complete. All private storage across a gap is charged. Exact extent is not a universal shot-complexity lower bound. The known collective upper constructions retain their attribution; the memory-constrained claims are proved in the scientific pages. The learning route, when present, supplements these authoritative scientific pages.
+Use normalized Choi operators and the exact resource class of each theorem. The signed atoms need not themselves be completely positive or trace preserving, but their underlying instruments are physical and complete. All private storage across a gap is charged. Exact extent is not a universal shot-complexity lower bound. The known collective upper constructions retain their attribution; the memory-constrained claims are proved in the scientific pages. The common learning route supplements these authoritative scientific pages. Its milestones describe the project, not a reader's assessment or progress.

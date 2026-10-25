@@ -10,7 +10,7 @@ This distinction explains the connection to established optimal collective cuts.
 
 ## A complete scheduling example
 
-Take six ordered qubit-wire slots. Suppose Alice's epochs are $[1,2,3]\mid[4,5,6]$ and Bob's are $[1,2]\mid[3,4,5]\mid[6]$. Their common intervals have lengths $2,1,2,1$. The exact extent is
+Take six ordered qubit-wire slots. Suppose Alice's epochs are $`[1,2,3]\mid[4,5,6]`$ and Bob's are $`[1,2]\mid[3,4,5]\mid[6]`$. Their common intervals have lengths $`2,1,2,1`$. The exact extent is
 
 ```math
 \Gamma=7\cdot3\cdot7\cdot3=441.
@@ -29,7 +29,7 @@ The epoch-overlap graph is the mathematical reason. An epoch at Alice can overla
 
 ## Synchronization at a fixed lifetime budget
 
-Let $n$ be even and allow a maximum uninterrupted epoch of two slots at each laboratory. Aligned boundaries give common intervals of length two. Shifting one laboratory's boundaries by one slot gives a break at every gap; the first and last epochs may be shorter.
+Let $`n`$ be even and allow a maximum uninterrupted epoch of two slots at each laboratory. Aligned boundaries give common intervals of length two. Shifting one laboratory's boundaries by one slot gives a break at every gap; the first and last epochs may be shorter.
 
 ```math
 \Gamma_{\mathrm{aligned}}=7^{n/2},
@@ -40,7 +40,7 @@ Let $n$ be even and allow a maximum uninterrupted epoch of two slots at each lab
 =\left(\frac97\right)^{n/2}.
 ```
 
-Both schedules obey the same maximum local lifetime budget. Their relative timing produces an exponential ratio in signed extent. The ratio of the corresponding generic squared-extent sampling bounds is $(9/7)^n$. Both costs still grow exponentially; this comparison does not establish that a large cut circuit is practical.
+Both schedules obey the same maximum local lifetime budget. Their relative timing produces an exponential ratio in signed extent. The ratio of the corresponding generic squared-extent sampling bounds is $`(9/7)^n`$. Both costs still grow exponentially; this comparison does not establish that a large cut circuit is practical.
 
 The boundaries here are complete information-breaking operations on the entire private memory. A finite physical qubit lifetime alone does not imply such a boundary. For example, transferring a quantum state into a fresh qubit can preserve information beyond the lifetime of one carrier. That transferred state remains charged quantum memory under the model.
 
@@ -64,22 +64,22 @@ For at least two nontrivial wires, this is a strict improvement. A retained outp
 
 ## Noisy coherence has a continuous value
 
-For two qubit wires, define $r=\eta_A\eta_B$ using the independent dephasing parameters in the [noisy-memory theorem](dephasing-memory.md). Then
+For two qubit wires, define $`r=\eta_A\eta_B`$ using the independent dephasing parameters in the [noisy-memory theorem](dephasing-memory.md). Then
 
 ```math
 g(r)=5+\frac4{1+r}.
 ```
 
-| Surviving joint coherence $r$ | Exact two-slot extent $g(r)$ |
+| Surviving joint coherence $`r`$ | Exact two-slot extent $`g(r)`$ |
 |---:|---:|
 | 0 | 9 |
-| $1/4$ | $41/5=8.2$ |
-| $1/2$ | $23/3\approx7.667$ |
+| $`1/4`$ | $`41/5=8.2`$ |
+| $`1/2`$ | $`23/3\approx7.667`$ |
 | 1 | 7 |
 
-Every $r>0$ improves on independent single-slot cutting. If both laboratories must undergo a complete memory break between each pair of slots and the noise instances are fresh and independent across blocks, the exact extent for $2m$ slots is $g(r)^m$. A product of the two-slot witnesses proves the converse, as shown in [dephasing memory](dephasing-memory.md). If those block resets are optional, the same expression is an attainable upper bound; it does not determine the unrestricted many-slot optimum with continuously noisy memories.
+Every $`r>0`$ improves on independent single-slot cutting. If both laboratories must undergo a complete memory break between successive two-slot blocks and the noise instances are fresh and independent across blocks, the exact extent for $`2m`$ slots is $`g(r)^m`$. A product of the two-slot witnesses proves the converse, as shown in [dephasing memory](dephasing-memory.md). If those block resets are optional, the same expression is an attainable upper bound; it does not determine the unrestricted many-slot optimum with continuously noisy memories.
 
-For stationary exponential dephasing, one may substitute $\eta_s=\exp(-t/T_{2,s})$ as a physical model for a gap of duration $t$. The exact theorem itself is stated for the channels $\mathcal D_{\eta_s}$, without assuming that a measured coherence time certifies stationarity, independence, or the absence of additional gate noise.
+For stationary exponential dephasing, one may substitute $`\eta_s=\exp(-t/T_{2,s})`$ as a physical model for a gap of duration $`t`$. The exact theorem itself is stated for the channels $`\mathcal D_{\eta_s}`$, without assuming that a measured coherence time certifies stationarity, independence, or the absence of additional gate noise.
 
 In particular, independent marginal calibration is insufficient to certify the product-noise hypothesis. Perfectly correlated unflagged phase flips can leave each memory marginally completely dephased while preserving the joint temporal resource needed for extent seven. The [counterexample](dephasing-memory.md) identifies the relevant joint correlation directly.
 
@@ -91,9 +91,9 @@ In particular, independent marginal calibration is insufficient to certify the p
 | Transient quantum workspace | Current input/resource ports and local measurement workspace | Current input/resource ports and local measurement workspace |
 | Spatial entanglement or quantum link | None | None |
 | Classical information | Two basis-string labels, phases, sampled signs and teleportation outcomes | One of four resource families, local twirl labels, signs and teleportation outcomes |
-| Classical label size | $O(\sum_{j\in I}\log d_j)$ bits | Constant per two-slot block |
+| Classical label size | $`O(\sum_{j\in I}\log d_j)`$ bits | Constant per two-slot block |
 | State preparation | Explicit sequential two-string states; no amplitude-loading oracle | Product local Bell resources, dephasing and finite unitary twirls |
-| Classical communication | Standard teleportation outcomes; $2\log_2 d_j$ bits for a dimension-$d_j$ wire | Two bits per qubit teleportation |
+| Classical communication | Standard teleportation outcomes; $`\lceil\log_2(d_j^2)\rceil`$ bits for a fixed-length outcome label on a dimension-$`d_j`$ wire | Two bits per qubit teleportation |
 | Precision requirement | Physical implementation and sampling precision | Physical implementation, calibrated dephasing parameters, coupled coefficient rounding and sampling precision |
 
 The number of possible two-string labels is exponential, but a sampled label is generated and processed directly. It does not require storing an exponential table or loading an arbitrary amplitude vector. For qubits, the local sequential state generator uses elementary Clifford operations. General qudit labels require the corresponding controlled basis-state preparation operations; no hardware-independent elementary-gate cost is claimed for arbitrary dimension.
@@ -104,20 +104,20 @@ Calibration is an additional measurement task. The [precision account](precision
 
 ## From signed extent to a sampling guarantee
 
-For a decomposition with extent $\Gamma$, sample term $\ell$ with probability $|a_\ell|/\Gamma$. Run its physical instrument, record its score $s_h$, and obtain a tester outcome $Y\in[-1,1]$. The random variable
+For a decomposition with extent $`\Gamma`$, sample term $`\ell`$ with probability $`|a_\ell|/\Gamma`$. Run its physical instrument, record its score $`s_h`$, and obtain a tester outcome $`Y\in[-1,1]`$. The random variable
 
 ```math
 X=\Gamma\,\operatorname{sgn}(a_\ell)\,s_hY
 ```
 
-is unbiased for the target expectation when the process identity is exact, and satisfies $|X|\leq\Gamma$. Independent repetitions therefore obey the sufficient Hoeffding bound
+is unbiased for the target expectation when the process identity is exact, and satisfies $`|X|\leq\Gamma`$. Independent repetitions therefore obey the sufficient Hoeffding bound
 
 ```math
 N\geq\frac{2\Gamma^2}{\epsilon_{\mathrm{stat}}^2}
 \log\frac2{\delta_{\mathrm{stat}}}.
 ```
 
-It gives statistical error at most $\epsilon_{\mathrm{stat}}$ with failure probability at most $\delta_{\mathrm{stat}}$. A separately controlled calibration or implementation bias adds to the statistical error. This bound does not assert that every estimator needs $\Gamma^2$ samples. Variance-aware methods, known observables, circuit structure, or controlled bias can change the sampling problem; [related work](../references/related-work.md) discusses the corresponding literature.
+It gives statistical error at most $`\epsilon_{\mathrm{stat}}`$ with failure probability at most $`\delta_{\mathrm{stat}}`$. A separately controlled calibration or implementation bias adds to the statistical error. This bound does not assert that every estimator needs $`\Gamma^2`$ samples. Variance-aware methods, known observables, circuit structure, or controlled bias can change the sampling problem; [related work](../references/related-work.md) discusses the corresponding literature.
 
 ## What the exact frontiers establish
 

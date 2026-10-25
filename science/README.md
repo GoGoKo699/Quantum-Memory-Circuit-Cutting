@@ -17,6 +17,8 @@ The scientific account is organized by the question each page answers. The [oper
 
 For the shortest route to the physical result, read **model → resource interpretation → reset schedules → dephasing memory**. For the proof route, read **model → forest witness → reset schedules → wire construction → gate cuts**, then the noisy-memory and precision pages. The [related-work comparison](../references/related-work.md) explains where the established collective-cutting constructions enter both routes.
 
+For a guided conceptual route, use the [worked explanation](../learning/tutorial.md), the [30-milestone map](../learning/milestones.md), and the [Watrous source bridge](../learning/anchor.md). The scientific pages below remain the canonical statements and proofs.
+
 ## Proof structure
 
 The reset results have two independent halves. The converse turns complete local memory breaks into a product over coherence-epoch vertices, then uses the forest witness. The achievable construction operates separately inside each common interval, respects the actual port deadlines, and consumes its private quantum resources before the interval ends. Equality follows by matching their extents.
