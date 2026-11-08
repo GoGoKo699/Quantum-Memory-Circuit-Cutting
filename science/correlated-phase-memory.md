@@ -39,18 +39,18 @@ W=50\Phi_{25}-I_{625}.
 For every positive spatially separable operator $`X`$,
 
 ```math
-0\le\operatorname{Tr}(\Phi_{25}X)\le\frac{\operatorname{Tr}X}{25},
-\qquad |\operatorname{Tr}(WX)|\le\operatorname{Tr}X.
+0\le\mathrm{Tr}(\Phi_{25}X)\le\frac{\mathrm{Tr}X}{25},
+\qquad |\mathrm{Tr}(WX)|\le\mathrm{Tr}X.
 ```
 
-Every physical outcome Choi operator remains spatially separable: local operations, classical communication, and the shared-random mixture of product phase unitaries preserve this property. Refining histories or mathematically expanding the noise sum does not grant the simulator the hidden error flag. Completeness gives $`\sum_h\operatorname{Tr}J(\mathcal C_h)=1`$, so
+Every physical outcome Choi operator remains spatially separable: local operations, classical communication, and the shared-random mixture of product phase unitaries preserve this property. Refining histories or mathematically expanding the noise sum does not grant the simulator the hidden error flag. Completeness gives $`\sum_h\mathrm{Tr}J(\mathcal C_h)=1`$, so
 
 ```math
-|\operatorname{Tr}WJ(\mathcal F)|
-\le\sum_h |s_h|\operatorname{Tr}J(\mathcal C_h)\le1.
+|\mathrm{Tr}WJ(\mathcal F)|
+\le\sum_h |s_h|\mathrm{Tr}J(\mathcal C_h)\le1.
 ```
 
-Since $`\operatorname{Tr}(W\Phi_{25})=49`$, both extents are at least 49. This argument includes arbitrary local filtering and adaptive communication, without normalizing successful branches. Continuity of the finite-dimensional witness extends the bound to the operational closure. In particular, no valid universal witness can establish a strict gap once the construction below is available.
+Since $`\mathrm{Tr}(W\Phi_{25})=49`$, both extents are at least 49. This argument includes arbitrary local filtering and adaptive communication, without normalizing successful branches. Continuity of the finite-dimensional witness extends the bound to the operational closure. In particular, no valid universal witness can establish a strict gap once the construction below is available.
 
 ## Resource notation
 
@@ -152,12 +152,12 @@ At $`x=0`$ the even/odd probabilities are 1 and 0; at every nonzero $`x`$ they a
 
 | Quantity | Exact value |
 |---|---:|
-| Signed trace $`\operatorname{Tr}F_{\rm raw}`$ | $`1/4`$ |
+| Signed trace $`\mathrm{Tr}F_{\rm raw}`$ | $`1/4`$ |
 | First marginal Bell overlap | $`1/20`$ |
 | Second marginal Bell overlap | $`1/40`$ |
 | Joint Bell overlap | $`1/40`$ |
 
-For detail, the reduced operator of $`E_x-O_x`$ on its first temporal port is one half of $`\operatorname{diag}(\cos2\theta_x,\cos4\theta_x)`$, whose mean squared Hilbert–Schmidt norm is $`1/4`$. Its reduced operator on the second port is diagonal with both entries $`(\cos2\theta_x+\cos4\theta_x)/4`$, whose mean squared norm is $`1/8`$. Divide these by 5 for the marginal Bell overlaps. The joint overlap is $`\mathbb E_x[p_e(x)^2+p_o(x)^2]/25=(5/8)/25`$. The marginal asymmetry matters.
+For detail, the reduced operator of $`E_x-O_x`$ on its first temporal port is one half of $`\mathrm{diag}(\cos2\theta_x,\cos4\theta_x)`$, whose mean squared Hilbert–Schmidt norm is $`1/4`$. Its reduced operator on the second port is diagonal with both entries $`(\cos2\theta_x+\cos4\theta_x)/4`$, whose mean squared norm is $`1/8`$. Divide these by 5 for the marginal Bell overlaps. The joint overlap is $`\mathbb E_x[p_e(x)^2+p_o(x)^2]/25=(5/8)/25`$. The marginal asymmetry matters.
 
 After the independent slot twirls,
 
