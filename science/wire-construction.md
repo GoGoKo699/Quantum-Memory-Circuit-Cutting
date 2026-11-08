@@ -12,7 +12,7 @@ Consider an interval of $`m`$ slots, with dimensions $`d_1,\ldots,d_m`$, and wri
 D=\prod_{j=1}^m d_j.
 ```
 
-A basis label is a string $`x=(x_1,\ldots,x_m)`$ with $`0\leq x_j<d_j`$. Under this product-basis identification,
+A basis label is a string $`x=(x_1,\ldots,x_m)`$ with $`0\leq x_j\lt d_j`$. Under this product-basis identification,
 
 ```math
 |\Phi_D\rangle
@@ -23,7 +23,7 @@ A basis label is a string $`x=(x_1,\ldots,x_m)`$ with $`0\leq x_j<d_j`$. Under t
 
 The subscripts $`A,B`$ here label local resource ports. They do not presume that the physical protocol can prepare an entangled state between the laboratories. Instead, the entangled operator will be expressed as a signed sum of local resource states.
 
-For an unordered pair $`x<y`$, define
+For an unordered pair $`x\lt y`$, define
 
 ```math
 X_{xy}=|x\rangle\langle y|+|y\rangle\langle x|,
@@ -36,7 +36,7 @@ Expanding the matrix elements of $`\Phi_D`$ gives
 ```math
 \Phi_D
 =\frac1D\sum_x|x\rangle\langle x|\otimes|x\rangle\langle x|
-+\frac1{2D}\sum_{x<y}
++\frac1{2D}\sum_{x\lt y}
 \left(X_{xy}\otimes X_{xy}-Y_{xy}\otimes Y_{xy}\right).
 ```
 
@@ -101,7 +101,7 @@ Before slot $`f`$, emit the fixed symbols $`x_j=y_j`$ without coupling them to $
 \frac{|0\rangle_M+\zeta|1\rangle_M}{\sqrt2}.
 ```
 
-For each $`f\leq j<\ell`$, initialize a fresh output register in $`|x_j\rangle`$ and apply a memory-controlled permutation that sends $`|x_j\rangle`$ to $`|y_j\rangle`$ on the $`M=1`$ branch. If the two symbols agree, this operation is the identity. The emitted prefix is now coherently correlated with the binary branch held by $`M`$.
+For each $`f\leq j\lt\ell`$, initialize a fresh output register in $`|x_j\rangle`$ and apply a memory-controlled permutation that sends $`|x_j\rangle`$ to $`|y_j\rangle`$ on the $`M=1`$ branch. If the two symbols agree, this operation is the identity. The emitted prefix is now coherently correlated with the binary branch held by $`M`$.
 
 At the last differing position, initialize the output register and apply an isometry satisfying
 

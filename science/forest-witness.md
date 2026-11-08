@@ -191,7 +191,7 @@ This proves the lower bound in Theorem 1.
 
 ## 4. A matching finite decomposition
 
-It is enough to construct a single-edge decomposition. Suppress the edge label. For $`i<j`$, define on the first endpoint
+It is enough to construct a single-edge decomposition. Suppress the edge label. For $`i\lt j`$, define on the first endpoint
 
 ```math
 X_{ij}^{A}=|a_i\rangle\langle a_j|+|a_j\rangle\langle a_i|,
@@ -205,7 +205,7 @@ and define $`X_{ij}^{B},Y_{ij}^{B}`$ in the corresponding $`b`$ basis. Then
 |\psi\rangle\langle\psi|
 =\sum_i s_i^2
 |a_i\rangle\langle a_i|\otimes|b_i\rangle\langle b_i|
- +\frac12\sum_{i<j}s_i s_j
+ +\frac12\sum_{i\lt j}s_i s_j
 \left(X_{ij}^{A}\otimes X_{ij}^{B}
 -Y_{ij}^{A}\otimes Y_{ij}^{B}\right).
 ```
@@ -224,10 +224,10 @@ and each $`Y`$ is a difference of the projectors onto
 =\frac{|a_i\rangle\pm i|a_j\rangle}{\sqrt2}.
 ```
 
-The same identities hold at the second endpoint. Consequently each pair $`i<j`$ contributes eight signed product density operators, each with coefficient magnitude $`s_i s_j/2`$. The total coefficient extent is
+The same identities hold at the second endpoint. Consequently each pair $`i\lt j`$ contributes eight signed product density operators, each with coefficient magnitude $`s_i s_j/2`$. The total coefficient extent is
 
 ```math
-\sum_i s_i^2+4\sum_{i<j}s_i s_j
+\sum_i s_i^2+4\sum_{i\lt j}s_i s_j
 =2\left(\sum_i s_i\right)^2-1.
 ```
 
