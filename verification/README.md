@@ -9,6 +9,7 @@ Use Python 3.10 or later and NumPy `>=1.26,<3`. From the repository root:
 ```bash
 python -m pip install -r verification/requirements.txt
 python verification/verify.py --output verification/results.json
+python verification/correlated_phase_checks.py
 ```
 
 The checked-in report was generated with **Python 3.12.14 and NumPy 2.3.5**. There is no network access, optimization solver, or optional plotting dependency in the checks. The random seed is **20261025** (and seed + 1 for local filter examples). Random inputs are reproducible coverage of specified finite cases, not an optimization or a proof by sampling. Last floating-point digits can vary with NumPy and the linear algebra backend; compare the assertions and tolerances, not JSON byte equality. Run ordinary Python, without the `-O` option that disables assertions.
@@ -41,6 +42,16 @@ The gate checks are also available separately:
 ```bash
 python verification/gate_checks.py
 ```
+
+The correlated five-level memory checks are available separately:
+
+```bash
+python verification/correlated_phase_checks.py --output /tmp/correlated-phase-results.json
+```
+
+This checks the [linear and cubic phase-memory theorem](../science/correlated-phase-memory.md). It contracts all five hidden physical phase draws and all four pairs of local parity outcomes before applying any twirl formula. The physical branch probabilities sum to one, the two decoder Kraus operators form a complete instrument, and each unscored branch density matrix agrees between the linear and cubic laws. It then checks the four independently contracted Bell-sector probabilities and the full $`625\times625`$ resource identities for the extent-49 scored construction, the direct linear construction, and the proposed cubic bound $`97-16\sqrt5`$. The signed parity atom has trace $`1/4`$; its branch probabilities are retained and it is never renormalized.
+
+The same script directly contracts all 25 qudit Bell resource labels with all 25 Bell measurement outcomes, checking the corrected Kraus Choi matrices and completeness of each teleportation instrument. It evaluates the isotropic twirl using its four orthogonal sector projectors rather than enumerating Clifford group elements. The report uses explicit checks with failure exit status and does not depend on Python assertions. All 21 checks pass with NumPy 2.3.5; the maximum reported residual is below $`1.8\times10^{-15}`$. These finite contractions support the analytical full-process identity; they do not numerically establish the universal LOCC witness or operational closure. The channels here have correlated inaccessible phase errors and must be distinguished from the independent qubit-dephasing model in the main suite.
 
 They inspect the pair-dependent scoring in [Gate cuts](../science/gate-cuts.md). The one-gate calculation directly contracts each physical Bell vector and sums the weighted Kraus Choi matrices. It verifies all local instrument completeness relations. Omitting the pair score produces a maximum matrix error of approximately **0.0762**, so the example tests the non-Clifford correction rather than a case where ordinary local teleportation corrections suffice. For two slots, each physical cat product has four coherent Pauli-path alternatives. The code sums the signs over all 256 Bell records into a four-by-four matrix and then forms the complete Choi sum. The factor `16^-2` comes from squared Kraus amplitudes; outcome probabilities remain in the Kraus operators and are never replaced by uniform probabilities. An inaccessible reference is included by comparing normalized Choi matrices. This is one specified interslot tester, not a numerical proof for every causal tester.
 

@@ -31,6 +31,19 @@ All private quantum systems that carry information across a slot gap and can be 
 
 The results apply to finite-round local-operations-and-classical-communication protocols. Their lower bounds also hold for limits of such protocols, by continuity of the finite-dimensional witness functionals. No restriction on the amount of classical communication is used in the converses.
 
+### Two correlated five-level phase memories
+
+The [linear/cubic phase comparison](correlated-phase-memory.md) has two ordered five-dimensional identity wires and at most one five-level persistent memory per laboratory. It uses a different, joint gap channel:
+
+```math
+\mathcal N_f(\rho)=\frac15\sum_{x\in\mathbb F_5}
+(Z^x\otimes Z^{f(x)})\rho(Z^x\otimes Z^{f(x)})^\dagger,
+\quad Z|j\rangle=e^{2\pi i j/5}|j\rangle,
+\quad f(x)=x\text{ or }x^3.
+```
+
+Conditional on every allowed pre-gap classical history, the hidden draw is uniform and independent of that history. Its flag and environment are inaccessible. Each local marginal completely dephases, but the joint errors are correlated. The port deadlines, charged storage and complete scored-instrument conventions remain those of this page. The independent-qubit theorem below has separate hypotheses and is not a theorem for these joint channels.
+
 ### Prescribed complete memory breaks
 
 Each laboratory has a prescribed partition of the slot sequence into consecutive **coherence epochs**. Within an epoch its quantum memory dimension is unrestricted. At every boundary the channel acting on its entire persistent quantum register is entanglement breaking. It can be written as a measurement followed by preparation, possibly conditioned on the surviving classical record.
@@ -116,6 +129,7 @@ for every allowed scored atom, then every exact decomposition satisfies $`\Gamma
 | Ordered identity wires with prescribed complete memory breaks | $`\prod_{I\in\mathcal I}(2D_I-1)`$ | [Reset schedules](reset-schedules.md) and [wire construction](wire-construction.md) |
 | Ordered two-qubit gates with the same breaks | $`\prod_{I\in\mathcal I}(2\prod_{j\in I}\chi_j-1)`$ | [Gate cuts](gate-cuts.md) |
 | Two qubit wires with independent single-qubit dephasing memories | $`5+4/(1+\eta_A\eta_B)`$ | [Dephasing memory](dephasing-memory.md) |
+| Two five-dimensional wires with either specified linear or cubic joint phase channel and one five-level memory per laboratory | $`49`$ for each channel | [Correlated phase memory](correlated-phase-memory.md) |
 
 Here $`\chi_j=(\sum_\alpha|u_{j\alpha}|)^2`$, where $`u_{j\alpha}`$ are normalized KAK coefficients of the two-qubit gate. The upper bounds for unrestricted collective cutting use established constructions; their attribution and operational comparison are given in [related work](../references/related-work.md).
 

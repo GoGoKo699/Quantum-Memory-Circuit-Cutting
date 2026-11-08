@@ -2,6 +2,8 @@
 
 Primary sources and publication metadata were checked on **25 October 2026**. The bibliography is in [references.bib](references.bib). A journal publication year can differ from the first arXiv posting; both are recorded when that distinction matters. This account identifies the results and models on which the project builds. A literature search cannot certify priority or the absence of another proof.
 
+The joint $`q=5`$ phase-memory comparison with [LWE Noise Geometry](https://github.com/GoGoKo699/LWE-Noise-Geometry) was added on **9 November 2026**. The ownership and operational boundary of that result are stated below; it does not change the attribution of the existing collective-cutting results.
+
 ## The operational question
 
 The project asks how the exact quasiprobability extent changes when a simulator must respect a prescribed pattern of **local quantum memory continuity**. The target is a sequence of universal wire or gate slots. Each output is released before the next input is supplied; the simulator must work inside arbitrary causal surrounding computations, including computations with retained quantum references. Between slots, classical history can remain available, while specified local boundaries destroy all persistent quantum memory. The signed atoms come from complete physical instruments with scores of absolute value at most one. See [the model](../science/model.md).
@@ -57,6 +59,16 @@ The upper construction uses local temporal states, followed by spatial twirling 
 
 The physical distinctions matter. Giving the simulator a dephasing error flag, access to the environment, a second coherent storage system, or the second input before the gap changes the free set. The theorem does not characterize those alternatives. Mandatory complete resets at both laboratories between noisy blocks yield the stated exact block product corollary. For uninterrupted many-slot memories, repeating the two-slot protocol gives an upper bound; exact general noisy-memory multiplicativity is not claimed.
 
+## Linear and cubic phase channels: a task comparison
+
+[LWE Noise Geometry](https://github.com/GoGoKo699/LWE-Noise-Geometry) defines the correlated phase laws $`(x,x)`$ and $`(x,x^3)`$ for uniform $`x\in\mathbb F_5`$. Its [channel account](https://github.com/GoGoKo699/LWE-Noise-Geometry/blob/main/science/channels.md) proves matched proper-input marginals and several global diagnostics while retaining a difference in the channels' geometry. Its fixed-source learning comparison has a separate access model and conditional cryptographic hardness assumptions. Those results neither promise nor require a circuit-cutting extent separation.
+
+The [correlated phase-memory theorem](../science/correlated-phase-memory.md) imports the two physical joint channels into this repository's strict sequential cutting interface. There is one persistent five-level memory at each laboratory, the first output leaves before the second unknown input arrives, and the hidden phase flags are inaccessible. Both extents are exactly 49. The inherited spatial robustness witness gives the universal lower bound; a complete parity instrument and its four-resource identity attain it. The cubic upper bound $`97-16\sqrt5`$ remains a valid attainable value, but is not optimal.
+
+This is a joint result of the comparison. **Quantum Memory Circuit Cutting owns the canonical complete proof and verification; LWE Noise Geometry owns the phase laws and channel/learning results.** The sister's [circuit-cutting page](https://github.com/GoGoKo699/LWE-Noise-Geometry/blob/main/science/circuit-cutting.md) gives its self-contained consequence and points back to the proof. The new ingredient is the complete parity construction at $`q=5`$, not another discovery of the collective spatial bound or the instrument framework. A deterministic-resource or invertible-filter restriction would omit the successful instrument: its scored operator has trace $`1/4`$, and all physical outcomes and their probabilities remain part of the experiment.
+
+The special relation $`x^3\in\{x,-x\}`$ explains why reflection parity suffices. Equal cutting extent does not identify the channels, imply equal fixed-source learning complexity, or extend the result to other primes or arbitrary memory tasks. This comparison is unconditional and requires no LWE hardness assumption.
+
 ## Recent work and the scope of a sampling statement
 
 The following 2026 sources address adjacent questions. Their distinctions are relevant even when their circuits or resource formulas have a similar appearance.
@@ -84,5 +96,7 @@ The [precision result](../science/precision-calibration.md) is correspondingly a
 | Combs and strategy norms | Chiribella–D'Ariano–Perinotti; Gutoski |
 | Concurrence, assistance, and filtering ingredients | Wootters; Laustsen–Verstraete–van Enk; Verstraete–Dehaene–De Moor |
 | Exact common-refinement reset law, its forest converse, and specified two-slot dephasing law | Derived in this repository, under the explicit model assumptions |
+| Linear and cubic graph phase laws, matched channel diagnostics, and fixed-source learning distinctions | LWE Noise Geometry, with the access and conditional-hardness boundaries stated there |
+| Complete parity instrument and exact 49 for both specified joint $`q=5`$ phase memories | Joint comparison with LWE Noise Geometry; canonical proof and verification in this repository; spatial robustness and instrument foundations retain the attributions above |
 
-The last row identifies the mathematical claims to assess in this project. It does not turn the search record into a proof of novelty, and it does not transfer the claims to broader models than those stated in the scientific notes.
+The project-specific rows identify the mathematical claims to assess here. It does not turn the search record into a proof of novelty, and it does not transfer the claims to broader models than those stated in the scientific notes.

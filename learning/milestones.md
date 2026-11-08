@@ -359,13 +359,13 @@ Each dependency refers to an earlier milestone. The targets identify the concept
 
 **Central question.** Which physical changes preserve an exact product theorem, and which change the allowed simulation problem?
 
-**Understanding target.** Distinguish mandatory complete resets with fresh noise between blocks from optional independent repetition of a protocol. Explain why common phase errors can give extent seven despite completely dephased marginals, and why early access to the second input invalidates the strict-memory lower bound.
+**Understanding target.** Distinguish mandatory complete resets with fresh noise between blocks from optional independent repetition of a protocol. Explain why common phase errors can give extent seven despite completely dephased marginals, and why early access to the second input invalidates the strict-memory lower bound. Identify the separate five-level joint-noise model in which the linear and cubic phase channels both attain 49, without transferring the independent-qubit theorem to correlated noise.
 
 **Dependencies and story role.** M12, M19, M24. This integrates the reset and noisy results through their physical boundaries.
 
 **Conceptual connection.** A marginal channel, an abstract causal map, and a complete physical interface contain different information. Neither local Ramsey data nor a choice to batch two slots establishes all the assumptions of a converse.
 
-**Sources.** [Watrous](anchor.md), Theorem 2.22, Exercise 6.1, and §6.3.1 provide channel, break, and teleportation foundations. Project: [exact reset blocks and counterexamples](../science/dephasing-memory.md#6-endpoints-repeated-blocks-and-scope-tests).
+**Sources.** [Watrous](anchor.md), Theorem 2.22, Exercise 6.1, and §6.3.1 provide channel, break, and teleportation foundations. Project: [exact reset blocks and counterexamples](../science/dephasing-memory.md#6-endpoints-repeated-blocks-and-scope-tests) and [the correlated phase-memory model](../science/correlated-phase-memory.md).
 
 ### M26
 
@@ -429,12 +429,12 @@ Each dependency refers to an earlier milestone. The targets identify the concept
 
 **Central question.** What do the exact memory frontiers establish, and what conclusions require a different task or a different physical model?
 
-**Understanding target.** Relate the wire common-refinement law, its KAK gate extension, and the specified two-slot dephasing law to their distinct constructions and converses. Separate persistent memory from transient width, memory synchronization from hardware lifetime alone, universal signed extent from observable-specific sampling complexity, and analytical proof from finite verification.
+**Understanding target.** Relate the wire common-refinement law, its KAK gate extension, and the specified two-slot dephasing law to their distinct constructions and converses. Reconstruct the five-level parity example: check decoder completeness, keep all outcomes, explain the scored trace $`1/4`$, and combine its resource identity with the spatial witness to obtain $`\Gamma_L=\Gamma_C=49`$. Separate persistent memory from transient width, memory synchronization from hardware lifetime alone, universal signed extent from observable-specific sampling complexity, and analytical proof from finite verification.
 
 **Dependencies and story role.** M19, M21, M25–M26, M29. This closes the narrative phase by integrating the full result rather than adding another isolated lemma.
 
-**Conceptual connection.** The collective-cutting values, interference primitives, and general-gate upper construction have established antecedents. The scientific contribution lies in the stated constrained frontiers and their complete operational proofs; numerical checks and a literature comparison support their assessment without proving every neighboring claim.
+**Conceptual connection.** The collective-cutting values, interference primitives, and general-gate upper construction have established antecedents. The joint parity example shows that matched channel diagnostics and different phase geometry do not force a separation in every operational task. Its complete scored instrument reaches 49 even though a more restricted cubic construction has cost $`97-16\sqrt5`$. Numerical checks support these proofs without establishing every neighboring claim.
 
-**Sources.** [Watrous](anchor.md), §1.1.3, §3.3.2, Definition 6.1, and §6.3.1 provide the common mathematical and operational foundations. Project: [resource interpretation](../science/resource-interpretation.md#what-the-exact-frontiers-establish), [attribution map](../references/related-work.md#attribution-map), [scientific evidence and boundaries](../science/README.md#evidence-and-boundaries), and [verification guide](../verification/README.md).
+**Sources.** [Watrous](anchor.md), §1.1.3, §2.3.2, §3.3.2, Definition 6.1, and §6.3.1 provide the common mathematical and operational foundations. Project: [correlated phase-memory proof](../science/correlated-phase-memory.md), [parity worked example](tutorial.md#7-a-complete-parity-instrument-removes-the-proposed-gap), [resource interpretation](../science/resource-interpretation.md#what-the-exact-frontiers-establish), [attribution map](../references/related-work.md#attribution-map), [scientific evidence and boundaries](../science/README.md#evidence-and-boundaries), and [verification guide](../verification/README.md).
 
 [Learning route](README.md) · [Anchor and notation bridge](anchor.md) · [Scientific reading map](../science/README.md)

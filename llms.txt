@@ -1,6 +1,6 @@
 # Quantum Memory Circuit Cutting
 
-> Exact signed circuit-cutting extents under prescribed local memory breaks and a specified two-slot dephasing model. The repository contains the complete topic-based scientific account, source attribution, and finite verification code.
+> Exact signed circuit-cutting extents under prescribed local memory breaks, independent qubit dephasing, and two specified correlated q=5 phase channels. The repository contains the complete topic-based scientific account, source attribution, and finite verification code.
 
 ## Start here
 
@@ -14,12 +14,13 @@
 - Self-directed study: learning/README.md, learning/tutorial.md, learning/milestones.md and learning/anchor.md. Watrous (2018) is the sole educational anchor; the map has 12 background and 18 narrative milestones.
 - Reset theorem inspection: science/forest-witness.md, science/reset-schedules.md, then science/wire-construction.md or science/gate-cuts.md. Separate the converse from the achievable construction and its attribution.
 - Noisy theorem inspection: science/dephasing-memory.md, then science/precision-calibration.md. Preserve independent unflagged noise, strict ports, and the imposed-reset/fresh-noise conditions of the block product law.
+- Correlated phase comparison: science/correlated-phase-memory.md, then https://github.com/GoGoKo699/LWE-Noise-Geometry/blob/main/science/circuit-cutting.md. Both linear and cubic q=5 joint channels have exact two-wire extent 49. Preserve the complete parity instrument, inaccessible flags, strict timing and one five-level memory per laboratory; do not substitute the independent-qubit theorem or infer a strict gap from channel geometry.
 - Reproduction: verification/README.md, verification/verify.py and verification/results.json. Finite checks support the algebra and causal implementations; they are not universal optimality proofs.
 
 ## Learning route
 
 - [Learning entrypoint](learning/README.md): How the shared route, map and source bridge fit together.
-- [Worked explanation](learning/tutorial.md): One-cut witness, two-cut memory comparison, scheduling, gates, dephasing and precision.
+- [Worked explanation](learning/tutorial.md): One-cut witness, two-cut memory comparison, scheduling, gates, independent dephasing, complete parity scoring and precision.
 - [Thirty milestones](learning/milestones.md): Stable M01–M30 understanding targets, dependencies, conceptual connections and canonical references.
 - [Watrous source bridge](learning/anchor.md): Verified source locators, normalized Choi translation, and the research steps supplied beyond the textbook.
 
@@ -30,6 +31,7 @@
 - [Wire construction](science/wire-construction.md): Online one-persistent-qubit implementation and resource counts.
 - [Gate cuts](science/gate-cuts.md): KAK gate law, inherited upper construction, signed teleportation and charged storage.
 - [Dephasing memory](science/dephasing-memory.md): Exact two-slot theorem, complete converse, correlated-noise and timing counterexamples, and imposed-reset block corollary.
+- [Correlated phase memory](science/correlated-phase-memory.md): Canonical joint proof with LWE Noise Geometry, exact linear and cubic extent 49, complete parity instrument, streaming implementation and operational-closure converse.
 - [Precision and calibration](science/precision-calibration.md): Approximate-extent lower bounds, exact mismatch error, repeated-block bias, calibration and execution costs.
 - [Resource interpretation](science/resource-interpretation.md): Scheduling examples, resources and limits of the sampling interpretation.
 

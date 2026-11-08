@@ -8,7 +8,7 @@ The single educational anchor is **John Watrous, *The Theory of Quantum Informat
 
 | Read | Purpose |
 |---|---|
-| [From a single cut to quantum memory](tutorial.md) | A connected explanation with small worked examples, from signed weights and Bell probes to reset alignment, noisy memory and calibration. |
+| [From a single cut to quantum memory](tutorial.md) | A connected explanation with small worked examples, from signed weights and Bell probes to reset alignment, independent dephasing, complete parity scoring and calibration. |
 | [The 30-milestone map](milestones.md) | The common understanding targets, their dependencies, conceptual connections and exact scientific sources. |
 | [The Watrous source bridge](anchor.md) | Relevant parts of the one anchor, the Choi-normalization translation, and the additional ingredients supplied by the project and its primary research citations. |
 
@@ -24,7 +24,7 @@ The **12 background/preliminaries milestones** assemble a common language for st
 | M20–M21 | From gate Choi entanglement to the attributed collective gate construction and its reset extension |
 | M22–M25 | From four physical resources and temporal filtering to the exact noisy-memory law and its boundaries |
 | M26–M29 | From witness spectra to approximation, calibration, signed error composition and sampling |
-| M30 | The complete scientific account, its evidence, resource meaning and scope |
+| M30 | The complete scientific account, including the linear/cubic extent-49 parity example, its evidence, resource meaning and scope |
 
 The map is defined by the project and is the same for every reader. A reader may use the source bridge or a scientific proof whenever a concept needs more detail. The [science reading map](../science/README.md) gives the direct specialist route; its topic pages remain the authoritative homes of the exact statements and proofs.
 
@@ -33,5 +33,7 @@ The map is defined by the project and is the same for every reader. A reader may
 Two independent qubit cuts have signed extent nine. With one noiseless persistent qubit at each laboratory, a collective online construction attains seven. If either laboratory undergoes a genuine complete memory break between those two slots, the optimum returns to nine. Partial independent dephasing gives an exact value between these endpoints.
 
 Understanding why all three statements can hold together is the opening thread of the [worked explanation](tutorial.md). The answer uses physical input and output deadlines, the quantum information that actually crosses the gap, and the distinction between a real experimental run and its signed classical weight.
+
+A final comparison asks whether two different correlated phase geometries must have different cutting costs. The linear and cubic $`q=5`$ channels from [LWE Noise Geometry](https://github.com/GoGoKo699/LWE-Noise-Geometry) both attain 49 in the specified two-wire task. The [parity worked example](tutorial.md#7-a-complete-parity-instrument-removes-the-proposed-gap) shows why a scored atom with trace $`1/4`$ is legitimate when its complete instrument is retained. This example is incorporated into M25 and M30; the route remains exactly M01–M30.
 
 [Repository overview](../README.md) · [Scientific account](../science/README.md) · [Verification guide](../verification/README.md)
