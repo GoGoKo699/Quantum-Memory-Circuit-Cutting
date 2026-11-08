@@ -158,7 +158,58 @@ Two boundaries clarify the physics. Perfectly correlated phase flips can give th
 
 For many prescribed two-slot blocks, the exact factors multiply when both laboratories completely reset between blocks and the noise instances are fresh across blocks. If a cutter may retain coherence continuously across those boundaries, the product construction remains an upper bound; its optimality has not been established.
 
-## 7. Approximation, calibration and sampling have different roles
+## 7. A complete parity instrument removes the proposed gap
+
+**Connections: M09, M25 and M30.** Now consider two ordered five-dimensional wires. Each laboratory retains one five-level memory across the same strict gap. The joint channel applies $`Z^x`$ to Alice's memory and $`Z^{f(x)}`$ to Bob's, with hidden uniform $`x\in\mathbb F_5`$ and either $`f(x)=x`$ or $`f(x)=x^3`$. Here $`Z|j\rangle=e^{2\pi i j/5}|j\rangle`$. The draw is independent of the permitted pre-gap history, and its flag is inaccessible. This is correlated noise; the independent-qubit formula in the preceding section does not apply.
+
+The phase laws come from [LWE Noise Geometry](https://github.com/GoGoKo699/LWE-Noise-Geometry). Its channel distinctions raise a useful question: must nonlinear phase geometry increase this cutting cost? In this example the answer is no. The cubic bound $`97-16\sqrt5`$ is attainable, but a complete scored instrument improves it to 49.
+
+Define reflection-even and reflection-odd memory states for $`j=1,2`$:
+
+```math
+|s_j\rangle=\frac{|j\rangle+|-j\rangle}{\sqrt2},
+\qquad |a_j\rangle=\frac{|j\rangle-|-j\rangle}{\sqrt2}.
+```
+
+Each laboratory prepares its first resource port and memory in $`(|1\rangle|s_1\rangle+|2\rangle|s_2\rangle)/\sqrt2`$. After the noisy gap it decodes the memory into its second resource port using
+
+```math
+K_e=|0\rangle\langle0|+|1\rangle\langle s_1|+|2\rangle\langle s_2|,
+\qquad K_o=|2\rangle\langle a_1|+|1\rangle\langle a_2|.
+```
+
+The five bras form an orthonormal basis, so $`K_e^\dagger K_e+K_o^\dagger K_o=I_5`$. This is a complete physical experiment. Keep every outcome and use the accessible parity records to assign scores:
+
+| Alice's parity | Bob's parity | Score |
+|---|---|---:|
+| Even | Even | +1 |
+| Odd | Odd | +1 |
+| Even | Odd | −1 |
+| Odd | Even | −1 |
+
+Why can this work for the cubic law? Over $`\mathbb F_5`$, every $`x`$ satisfies $`x^3=\pm x`$. In the even branch, the temporal amplitudes are cosines, which do not change under $`x\mapsto-x`$. In the odd branch they are sines, which acquire one common sign. That sign leaves the branch density operator unchanged. Equal parity branches therefore match under both phase laws, while different parity branches have orthogonal temporal support. The simulator never learns $`x`$.
+
+Apply the usual independent bilateral isotropic twirls on the two spatial slot pairs. Put $`\Phi=\Phi_5`$ and $`R=(I_{25}-\Phi)/24`$. The scored operator of this experiment is
+
+```math
+F=\frac1{40}\Phi\otimes\Phi
+  +\frac1{40}\Phi\otimes R+\frac15R\otimes R,
+\qquad \mathrm{Tr}F=\frac14.
+```
+
+Its trace is the average score, rather than the probability of a selected success. The unscored instrument still has total probability one. Replacing $`F`$ by the normalized operator $`4F`$ as a free resource would change the experiment and its extent.
+
+Let $`\rho_+=\Phi/5+4R/5`$, $`\rho_-=R`$, and $`V_{ab}=\rho_a\otimes\rho_b`$. These deterministic separable resources need no persistent memory. The four-sector operator identity is
+
+```math
+\Phi\otimes\Phi=5V_{++}+32F-8V_{+-}-4V_{-+}.
+```
+
+Thus sample these four experiments with probabilities $`5/49,32/49,8/49,4/49`$ and multiply the final bounded outcome by 49, the outer coefficient sign, and the parity score when using $`F`$. The first resource ports are teleported and released before the gap; only the memories survive; the second unknown input arrives after the gap. A final classical score can be applied after both output deadlines. The [canonical proof](../science/correlated-phase-memory.md) verifies the full open-process identity and all physical branch probabilities.
+
+The lower bound is equally concrete. The ideal two-wire Choi state is $`\Phi_{25}`$, so the spatial witness $`50\Phi_{25}-I`$ takes value 49 on the target and absolute value at most one on every complete scored instrument. Spatial separability survives both joint random-phase channels. The bound includes arbitrary filtering and passes to operational limits by continuity. Hence $`\Gamma_L=\Gamma_C=49`$. Their equality in this task does not assert channel equivalence or equal learning complexity for a different source interface.
+
+## 8. Approximation, calibration and sampling have different roles
 
 **Connections: M26–M29.** An approximate universal decomposition is assessed against every causal tester, including one retaining quantum references. The strategy norm measures the largest trace-norm difference in such an experiment. This project defines its approximation parameter as **half** that norm. A bounded observable with outcomes in $`[-1,1]`$ can have bias as large as the full norm.
 
@@ -177,9 +228,9 @@ The project instead computes the exact signed Pauli-path coefficients of repeate
 
 Finally, uncertainty in calibration and fluctuations in execution consume different samples. Ramsey measurements estimate the two local coherence factors within the assumed channel family. The [charged calibration procedure](../science/precision-calibration.md#5-a-charged-calibration-procedure) propagates their finite-confidence error, accounts for coefficient precision, then gives a separate number of circuit executions for the final estimator. Marginal Ramsey measurements alone do not establish that the two memories' noise is independent.
 
-## 8. Putting the result together
+## 9. Putting the result together
 
-**Connection: M30.** The reset theorem determines the exact universal signed cost from two complete coherence schedules. The noisy two-slot theorem determines it from two specified independent local memory channels. Both connect a physical temporal resource to an attainable signed extent, with a converse covering arbitrary allowed adaptive instruments.
+**Connection: M30.** The reset theorem determines the exact universal signed cost from two complete coherence schedules. The noisy two-slot theorem determines it from two specified independent local memory channels. The correlated five-level comparison shows that distinct phase geometries can reach the same optimum through a complete scored instrument. Each result connects a precisely stated physical temporal resource to an attainable signed extent, with a converse covering arbitrary allowed adaptive instruments.
 
 The construction and the lower bound have different jobs. A resource identity, sampler and causal implementation establish an attainable cost. A witness valid on the entire allowed class establishes that no smaller extent is possible in that model. The [finite verification suite](../verification/README.md) checks identities, examples and nontrivial causal executions; the analytical proofs establish the universal statements.
 

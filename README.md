@@ -1,10 +1,12 @@
 # Quantum Memory Circuit Cutting
 
-**Exact circuit-cutting costs when local quantum memory has prescribed breaks or dephases between operations.**
+**Exact circuit-cutting costs under local memory breaks, independent dephasing, and specified correlated phase noise.**
 
 Collective circuit cutting trades quantum resources for signed classical sampling. Its advantage can depend on preserving quantum information between cuts. This repository studies that temporal resource explicitly: which coherences must survive, how two laboratories' reset schedules interact, and what a noisy stored qubit can still accomplish.
 
 The target is an open sequence of wire or gate slots, usable inside an arbitrary causal surrounding computation. Inputs arrive at their assigned slots, outputs leave before the next slot, and every private quantum system retained across a gap counts as memory. The optimized quantity is the **signed extent** $`\Gamma`$: the smallest sum of absolute coefficients in a universal quasiprobability decomposition into allowed physical instruments with bounded classical scores. These conventions are defined in [the operational model](science/model.md).
+
+**Sister connection — [LWE Noise Geometry](https://github.com/GoGoKo699/LWE-Noise-Geometry).** Its linear and cubic $`q=5`$ phase channels give the same exact two-wire cutting extent, $`\Gamma_L=\Gamma_C=49`$, with one persistent five-level memory per laboratory. A complete parity instrument attains the bound despite inaccessible error flags. This repository owns the [full proof and streaming construction](science/correlated-phase-memory.md); the sister repository gives the [channel-to-task comparison](https://github.com/GoGoKo699/LWE-Noise-Geometry/blob/main/science/circuit-cutting.md). Their different channel geometry and fixed-source learning behavior do not imply a strict gap for this cutting task.
 
 ## Main results
 
@@ -34,7 +36,25 @@ The extent runs from nine when either memory completely dephases to seven when b
 
 The result depends on the actual noise and port schedule: correlated phase errors with the same marginal channels can attain seven even when independent errors require nine. For prescribed two-slot blocks, the exact costs multiply if both laboratories completely reset between blocks and the noise is fresh across blocks. For uninterrupted many-slot noisy memories, the repeated-block protocol is an upper bound. [Complete noisy-memory theorem](science/dephasing-memory.md)
 
-### 3. Approximation and calibration are accounted for separately
+### 3. Linear and cubic phase memories both attain extent 49
+
+For two ordered five-dimensional identity wires, let the gap act on the two local five-level memories by the joint unflagged phase channel
+
+```math
+\mathcal N_f(\rho)=\frac15\sum_{x\in\mathbb F_5}
+(Z^x\otimes Z^{f(x)})\rho(Z^x\otimes Z^{f(x)})^\dagger,
+\qquad f(x)=x\text{ or }x^3.
+```
+
+Here $`Z|j\rangle=e^{2\pi i j/5}|j\rangle`$. The two actual input times and output deadlines remain fixed. The hidden draw is independent of every permitted pre-gap classical history, and neither its flag nor its environment is accessible. Each marginal memory channel completely dephases, while the joint errors are correlated. For both choices,
+
+```math
+\boxed{\Gamma_L=\Gamma_C=49.}
+```
+
+The inherited spatial separability witness supplies the lower bound for arbitrary filtering, complete scored instruments, and their operational closure. A complete reflection-parity instrument supplies the matching upper bound. Its scored operator has trace $`1/4`$: all physical outcomes are charged, and this operator is not renormalized into a free successful state. The cubic upper bound $`97-16\sqrt5`$ is also certified, but is nonoptimal. This joint five-level model is separate from the independent-qubit theorem above. [Correlated phase-memory proof](science/correlated-phase-memory.md)
+
+### 4. Approximation and calibration are accounted for separately
 
 Witness spectral ranges give lower bounds for approximate universal signed decompositions. They preserve an exponential separation between aligned and staggered reset schedules at fixed sufficiently small strategy error.
 
@@ -44,7 +64,7 @@ For the noisy two-slot construction, using nominal $`r_0`$ instead of actual $`r
 
 Start with the [science reading map](science/README.md). For a compact physical interpretation, see [memory alignment, examples and resource accounting](science/resource-interpretation.md). The [related-work comparison](references/related-work.md) and [primary-source bibliography](references/references.bib) distinguish inherited constructions from the constrained-memory claims proved here.
 
-In particular, collective wire cutting, low-ancilla interference constructions, and collective two-qubit gate cutting have established antecedents. The unrestricted upper constructions are attributed to Brenner–Piveteau–Sutter, Harrow–Lowe, and Schmitt–Piveteau–Sutter, as appropriate. The contribution assessed here is the memory-constrained converse and its consequences, including the specified dephasing tradeoff.
+In particular, collective wire cutting, low-ancilla interference constructions, and collective two-qubit gate cutting have established antecedents. The unrestricted upper constructions are attributed to Brenner–Piveteau–Sutter, Harrow–Lowe, and Schmitt–Piveteau–Sutter, as appropriate. The memory-constrained results include the reset and independent-dephasing frontiers. The joint result with LWE Noise Geometry adds the complete parity construction and exact extent-49 identity; its phase laws and channel distinctions come from that sister repository.
 
 ## Learn the project
 
@@ -52,7 +72,7 @@ The single educational anchor is **John Watrous, *The Theory of Quantum Informat
 
 The [30-milestone map](learning/milestones.md) follows the complete scientific story: **12 background/preliminaries milestones** assemble the operational framework, and **18 narrative/innovation milestones** connect the two converse mechanisms, matching constructions, precision analysis and physical interpretation. Every milestone includes a central question, an understanding target, earlier dependencies, a conceptual connection and source pointers.
 
-Start with [From a single cut to quantum memory](learning/tutorial.md) for a worked explanation of the costs three, seven and nine, the role of reset alignment, and the noisy-memory tradeoff. The [learning entrypoint](learning/README.md) connects this explanation, the source bridge and the map. The [LLM reading guide](llms.txt) provides direct routes for study, theorem inspection and reproduction.
+Start with [From a single cut to quantum memory](learning/tutorial.md) for a worked explanation of the costs three, seven and nine, reset alignment, independent dephasing, and the complete parity experiment attaining 49. The [learning entrypoint](learning/README.md) connects this explanation, the source bridge and the map. The [LLM reading guide](llms.txt) provides direct routes for study, theorem inspection and reproduction.
 
 ## Reproduce the finite checks
 
@@ -61,6 +81,7 @@ From the repository root:
 ```bash
 python -m pip install -r verification/requirements.txt
 python verification/verify.py --output verification/results.json
+python verification/correlated_phase_checks.py
 ```
 
 The [verification guide](verification/README.md) explains the fixed-seed checks of resource identities, witness bounds, reset graphs, genuinely online teleportation, non-Clifford gate reconstruction, noisy filters, and calibration formulas. The recorded [results](verification/results.json) accompany the code. Finite numerical checks support the algebra and implementation; the universal optimality statements rest on the analytical proofs in `science/`.
